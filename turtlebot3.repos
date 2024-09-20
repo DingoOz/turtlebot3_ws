@@ -1,0 +1,9 @@
+repositories:
+  turtlebot3:
+    type: git
+    url: https://github.com/DingoOz/turtlebot3.git
+    version: ros2
+  sllidar_ros2:
+    type: git
+    url: https://github.com/Slamtec/sllidar_ros2.git
+    version: main
