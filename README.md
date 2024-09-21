@@ -1,13 +1,11 @@
 # Custom TurtleBot3 with SLAMTEC Lidar
 
-This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar, using a forked version of the TurtleBot3 repository.
+This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar.
 
 ## Setup
 1. Clone this repository
-2. Install vcstool: `sudo apt install python3-vcstool`
-3. Import dependencies: `vcs import src < turtlebot3.repos`
-4. Build the workspace: `colcon build --symlink-install`
-5. Source the setup file: `source install/setup.bash`
+2. Build the workspace: `colcon build --symlink-install`
+3. Source the setup file: `source install/setup.bash`
 
 To clone this repository with all its submodules, use:
 
