@@ -1,6 +1,6 @@
 # Custom TurtleBot3 with SLAMTEC Lidar
 
-This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar, using a forked version of the TurtleBot3 repository.
+This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar.
 
 ## Setup
 1. Clone this repository
