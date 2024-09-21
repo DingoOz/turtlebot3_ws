@@ -9,6 +9,11 @@ This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar, using 
 4. Build the workspace: `colcon build --symlink-install`
 5. Source the setup file: `source install/setup.bash`
 
+To clone this repository with all its submodules, use:
+
+git clone --recursive https://github.com/yourusername/your-repo-name.git
+
+
 ## Usage
 [Add usage instructions here]
 
