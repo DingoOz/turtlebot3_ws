@@ -11,6 +11,14 @@ To clone this repository with all its submodules, use:
 
 git clone --recursive https://github.com/yourusername/your-repo-name.git
 
+#Building
+
+Do not have setuptools installed on your machine, or this will fail to build
+uninstall via:
+```
+pip3 uninstall setuptools
+```
+
 
 ## Usage
 [Add usage instructions here]
