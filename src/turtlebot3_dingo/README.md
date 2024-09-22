@@ -1,27 +1,5 @@
-# This repo
-This repository is for a customised Turtlebot3 robot. The customisation starts with the use of a rplidar A1 instead of the standard Lidar
 
-Currently it is built to operate on a Raspberry Pi4 4Gb. It is testing and working. 
-
-It assumes Ubuntu Server 22.04 as the Raspberry Pi OS and that ROS2 Humble is installed.
-
-Set up requires
-```
-sudo apt install ros-humble-joy-linux
-```
-
-# TurtleBot3
-<img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/turtlebot3/logo_turtlebot3.png" width="300">
-
-[![kinetic-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/kinetic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/kinetic-devel)
-[![melodic-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/melodic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/melodic-devel)
-[![noetic-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/noetic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/noetic-devel)
-
-[![dashing-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/dashing-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/dashing-devel)
-[![foxy-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/foxy-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/foxy-devel)
-[![galactic-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/galactic-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/galactic-devel)
-[![humble-devel Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/humble-devel/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/humble-devel)
-[![rolling(ros2 branch) Status](https://github.com/ROBOTIS-GIT/turtlebot3/workflows/ros2/badge.svg)](https://github.com/ROBOTIS-GIT/turtlebot3/tree/ros2)
+Additional info from the links below:
 
 ## ROBOTIS e-Manual for TurtleBot3
 - [ROBOTIS e-Manual for TurtleBot3](http://turtlebot3.robotis.com/)
