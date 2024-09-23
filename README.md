@@ -3,21 +3,25 @@
 This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar.
 
 ## Setup
-1. Clone this repository
-2. Build the workspace: `colcon build --symlink-install`
-3. Source the setup file: `source install/setup.bash`
+0. sudo apt install libv4l-dev
+1. Clone this repository   
+2. Source ROS setup file: `source /opt/ros/humble/setup.bash`
+3. Build the workspace: `colcon build --symlink-install`
+
 
 To clone this repository with all its submodules, use:
 
 git clone --recursive https://github.com/yourusername/your-repo-name.git
 
-#Building
+# Building
 
 Do not have setuptools installed on your machine, or this will fail to build
 uninstall via:
 ```
 pip3 uninstall setuptools
 ```
+
+canera requires: sudo apt-get install libv4l-dev
 
 
 ## Usage
