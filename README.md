@@ -3,7 +3,7 @@
 This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar.
 
 ## Setup
-0. sudo apt install libv4l-dev
+0. sudo apt install libv4l-dev ros-humble-cv-bridge
 1. Clone this repository   
 2. Source ROS setup file: `source /opt/ros/humble/setup.bash`
 3. Build the workspace: `colcon build --symlink-install`
