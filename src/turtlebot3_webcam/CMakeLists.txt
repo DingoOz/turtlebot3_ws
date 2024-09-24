@@ -13,11 +13,17 @@ find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(OpenCV REQUIRED)
 
+# Add these lines for libudev
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(LIBUDEV REQUIRED libudev)
+
 # camera_publisher executable
 add_executable(camera_publisher src/camera_publisher.cpp)
 target_include_directories(camera_publisher PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+  $<INSTALL_INTERFACE:include>
+  ${LIBUDEV_INCLUDE_DIRS}  # Add this line
+)
 target_compile_features(camera_publisher PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 ament_target_dependencies(
   camera_publisher
@@ -27,6 +33,8 @@ ament_target_dependencies(
   image_transport
   OpenCV
 )
+# Add this line to link against libudev
+target_link_libraries(camera_publisher ${LIBUDEV_LIBRARIES})
 
 # camera_viewer executable
 add_executable(camera_viewer src/camera_viewer.cpp)
