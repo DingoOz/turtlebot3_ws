@@ -39,17 +39,20 @@ class XboxTeleopNode(Node):
                 direction_reversed = True
             
             # Calculate linear velocity
-            linear_velocity = math.sqrt(forward_input**2 + sideways_input**2)
+            #linear_velocity = math.sqrt(forward_input**2 + sideways_input**2)
+            linear_velocity = forward_input
             # Preserve the sign of forward_input to allow backward motion
-            twist.linear.x = math.copysign(linear_velocity, forward_input) * 0.5  # Scale down to 0.5 m/s max
+            #twist.linear.x = math.copysign(linear_velocity, forward_input) * 0.5  # Scale down to 0.5 m/s max
+            twist.linear.x = forward_input
             
             # Calculate angular velocity using atan2
-            if linear_velocity != 0:
+            #if linear_velocity != 0:
                 # Use -sideways_input to get correct turning direction
-                angular_velocity = math.atan2(-sideways_input, abs(forward_input))
-                twist.angular.z = angular_velocity * 1.5  # Scale to 1.5 rad/s max
-            else:
-                twist.angular.z = 0.0
+                #angular_velocity = math.atan2(-sideways_input, abs(forward_input))
+            #    twist.angular.z = angular_velocity * 1.5  # Scale to 1.5 rad/s max
+            #else:
+            #    twist.angular.z = 0.0
+            twist.angular.z = sideways_input
 
         # Display Xbox controller axes data
         self.get_logger().info('Xbox Controller Axes:')
