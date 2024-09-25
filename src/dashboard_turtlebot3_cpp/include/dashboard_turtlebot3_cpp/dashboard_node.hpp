@@ -14,7 +14,7 @@ class TwistWidget : public QWidget {
   Q_OBJECT
 
 public:
-  TwistWidget(QWidget* parent = nullptr);
+  explicit TwistWidget(QWidget* parent = nullptr);
   void updateTwist(const geometry_msgs::msg::Twist::SharedPtr msg);
 
 private:
@@ -22,6 +22,7 @@ private:
   QLabel* linear_label;
   QLabel* angular_label;
   QProgressBar* linear_progress;
+  QProgressBar* angular_progress;
 };
 
 class DashboardNode : public rclcpp::Node {

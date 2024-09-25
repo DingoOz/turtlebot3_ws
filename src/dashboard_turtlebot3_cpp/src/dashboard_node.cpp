@@ -6,12 +6,20 @@ TwistWidget::TwistWidget(QWidget* parent) : QWidget(parent) {
   layout = new QVBoxLayout(this);
   linear_label = new QLabel("Linear: x=0.00, y=0.00, z=0.00", this);
   angular_label = new QLabel("Angular: x=0.00, y=0.00, z=0.00", this);
+  
   linear_progress = new QProgressBar(this);
   linear_progress->setRange(-100, 100);  // Assuming max speed is 1 m/s
   linear_progress->setFormat("Linear X: %v");
+  
+  // Add new progress bar for angular velocity
+  angular_progress = new QProgressBar(this);
+  angular_progress->setRange(-100, 100);  // Assuming max angular velocity is 1.5 rad/s
+  angular_progress->setFormat("Angular Z: %v");
+  
   layout->addWidget(linear_label);
   layout->addWidget(angular_label);
   layout->addWidget(linear_progress);
+  layout->addWidget(angular_progress);  // Add the new progress bar to the layout
   setLayout(layout);
 }
 
@@ -25,9 +33,13 @@ void TwistWidget::updateTwist(const geometry_msgs::msg::Twist::SharedPtr msg) {
     .arg(msg->angular.y, 0, 'f', 2)
     .arg(msg->angular.z, 0, 'f', 2));
   
-  // Update progress bar
-  int progress_value = static_cast<int>(msg->linear.x * 100);  // Scale to -100 to 100
-  linear_progress->setValue(progress_value);
+  // Update linear velocity progress bar
+  int linear_progress_value = static_cast<int>(msg->linear.x * 100);  // Scale to -100 to 100
+  linear_progress->setValue(linear_progress_value);
+  
+  // Update angular velocity progress bar
+  int angular_progress_value = static_cast<int>(msg->angular.z / 1.5 * 100);  // Scale to -100 to 100, assuming max is 1.5 rad/s
+  angular_progress->setValue(angular_progress_value);
 }
 
 DashboardNode::DashboardNode() : Node("dashboard_turtlebot3") {
@@ -46,15 +58,12 @@ void DashboardNode::twistCallback(const geometry_msgs::msg::Twist::SharedPtr msg
 DashboardWindow::DashboardWindow(std::shared_ptr<DashboardNode> node, QWidget* parent)
   : QMainWindow(parent), dashboard_node_(node) {
   setWindowTitle("Turtlebot3 Dashboard");
-  setGeometry(100, 100, 400, 300);
-
+  setGeometry(100, 100, 400, 350);  // Increased height to 350
   twist_widget = new TwistWidget(this);
-
   QDockWidget* dock = new QDockWidget("Twist", this);
   dock->setWidget(twist_widget);
   dock->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable);
   addDockWidget(Qt::LeftDockWidgetArea, dock);
-
   QTimer* timer = new QTimer(this);
   connect(timer, &QTimer::timeout, this, &DashboardWindow::updateWidgets);
   timer->start(100);  // Update every 100ms
@@ -70,16 +79,13 @@ void DashboardWindow::updateWidgets() {
 int main(int argc, char** argv) {
   rclcpp::init(argc, argv);
   auto node = std::make_shared<DashboardNode>();
-
   QApplication app(argc, argv);
   DashboardWindow window(node);
   window.show();
-
   QTimer timer;
   QObject::connect(&timer, &QTimer::timeout, [&]() {
     rclcpp::spin_some(node);
   });
   timer.start(10);  // 10ms
-
   return app.exec();
 }
