@@ -33,7 +33,11 @@ class XboxTeleopNode(Node):
             twist.linear.x = forward_input
             # Axis 2 (left stick X-axis) for left/right movement
             sideways_input = joy_msg.axes[2]
-            twist.angular.z = sideways_input
+            
+            if forward_input < 0:
+                twist.angular.z = -1.0 * sideways_input
+            else: 
+                twist.angular.z = sideways_input
 
         # Display Xbox controller axes data
         self.get_logger().info('Xbox Controller Axes:')
