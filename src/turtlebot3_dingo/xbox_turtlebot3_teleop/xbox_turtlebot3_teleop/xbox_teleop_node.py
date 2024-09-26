@@ -29,29 +29,10 @@ class XboxTeleopNode(Node):
         if dead_man_switch:
             # Axis 1 (left stick Y-axis) for forward/backward movement
             forward_input = joy_msg.axes[1]
-            
+            forward_input = forward_input/10  #scale down factor
+            twist.linear.x = forward_input
             # Axis 2 (left stick X-axis) for left/right movement
             sideways_input = joy_msg.axes[2]
-            
-            # Reverse left/right direction only when moving forward
-            if forward_input >= 0:
-                sideways_input = -sideways_input
-                direction_reversed = True
-            
-            # Calculate linear velocity
-            #linear_velocity = math.sqrt(forward_input**2 + sideways_input**2)
-            linear_velocity = forward_input
-            # Preserve the sign of forward_input to allow backward motion
-            #twist.linear.x = math.copysign(linear_velocity, forward_input) * 0.5  # Scale down to 0.5 m/s max
-            twist.linear.x = forward_input
-            
-            # Calculate angular velocity using atan2
-            #if linear_velocity != 0:
-                # Use -sideways_input to get correct turning direction
-                #angular_velocity = math.atan2(-sideways_input, abs(forward_input))
-            #    twist.angular.z = angular_velocity * 1.5  # Scale to 1.5 rad/s max
-            #else:
-            #    twist.angular.z = 0.0
             twist.angular.z = sideways_input
 
         # Display Xbox controller axes data
