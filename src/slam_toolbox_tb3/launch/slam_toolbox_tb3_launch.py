@@ -8,7 +8,7 @@ def generate_launch_description():
     # Include the robot launch file
     turtlebot3_bringup_dir = get_package_share_directory('turtlebot3_bringup')
     robot_launch = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([turtlebot3_bringup_dir, '/launch/robot.launch.py'])
+        PythonLaunchDescriptionSource([turtlebot3_bringup_dir, '/launch/dingo.robot.launch.py'])
     )
 
     # Include the SLAM Toolbox launch file
