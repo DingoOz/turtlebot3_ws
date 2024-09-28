@@ -34,7 +34,7 @@ def generate_launch_description():
 
     ld = LaunchDescription()
 
-    ld.add_action(SetEnvironmentVariable('LDS_MODEL', lds_model))
+    #ld.add_action(SetEnvironmentVariable('LDS_MODEL', lds_model))
     ld.add_action(declare_use_sim_time_argument)
     ld.add_action(declare_slam_params_file_cmd)
     ld.add_action(start_async_slam_toolbox_node)
