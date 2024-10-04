@@ -23,6 +23,8 @@ pip3 uninstall setuptools
 
 canera requires: sudo apt-get install libv4l-dev
 
+wifi_shutdown_monitor requires: wireless-tools
+
 
 ## Usage
 [Add usage instructions here]
