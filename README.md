@@ -15,7 +15,7 @@ git clone --recursive https://github.com/yourusername/your-repo-name.git
 
 # Building
 
-Do not have setuptools installed on your machine, or this will fail to build
+Make sure that you do not have setuptools installed on your machine, or this will fail to build
 uninstall via:
 ```
 pip3 uninstall setuptools
@@ -24,6 +24,8 @@ pip3 uninstall setuptools
 canera requires: sudo apt-get install libv4l-dev
 
 wifi_shutdown_monitor requires: wireless-tools
+
+slamtool_box is required: sudo apt install ros-humble-slam-toolbox
 
 
 ## Usage
