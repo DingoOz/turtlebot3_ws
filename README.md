@@ -27,7 +27,7 @@ wifi_shutdown_monitor requires: wireless-tools
 
 slamtool_box is required: sudo apt install ros-humble-slam-toolbox
 
-
+sudo apt install ros-humble-nav2-bringup
 ## Usage
 [Add usage instructions here]
 
