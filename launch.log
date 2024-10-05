@@ -1,0 +1,248 @@
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+file 'dingo.robot.launch.py' was not found in the share directory of package 'turtlebot3_bringup' which is at '/opt/ros/humble/share/turtlebot3_bringup'
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2024-10-05-10-46-22-343606-ubuntu-3446
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_burger.urdf
+[INFO] [robot_state_publisher-1]: process started with pid [3504]
+[INFO] [sllidar_node-2]: process started with pid [3506]
+[INFO] [turtlebot3_ros-3]: process started with pid [3508]
+[INFO] [wifi_monitor-4]: process started with pid [3510]
+[sllidar_node-2] [INFO] [1728089182.885399753] [sllidar_node]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+[turtlebot3_ros-3] [INFO] [1728089182.885368529] [turtlebot3_node]: Init TurtleBot3 Node Main
+[turtlebot3_ros-3] [INFO] [1728089182.885913175] [turtlebot3_node]: Init DynamixelSDKWrapper
+[turtlebot3_ros-3] [INFO] [1728089182.892412412] [DynamixelSDKWrapper]: Succeeded to open the port(/dev/ttyACM0)!
+[turtlebot3_ros-3] [INFO] [1728089182.904166562] [DynamixelSDKWrapper]: Succeeded to change the baudrate!
+[sllidar_node-2] [INFO] [1728089182.909769389] [sllidar_node]: SLLidar S/N: AE8A9AF2C1EA9FC3BEEB9CF321593203
+[sllidar_node-2] [INFO] [1728089182.910072400] [sllidar_node]: Firmware Ver: 1.27
+[sllidar_node-2] [INFO] [1728089182.910189137] [sllidar_node]: Hardware Rev: 5
+[sllidar_node-2] [INFO] [1728089182.913388605] [sllidar_node]: SLLidar health status : 0
+[sllidar_node-2] [INFO] [1728089182.913584412] [sllidar_node]: SLLidar health status : OK.
+[robot_state_publisher-1] [INFO] [1728089182.939636906] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1728089182.941562140] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1728089182.943141366] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-1] [INFO] [1728089182.944623883] [robot_state_publisher]: got segment caster_back_link
+[robot_state_publisher-1] [INFO] [1728089182.946284789] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1728089182.948094379] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-1] [INFO] [1728089182.949853106] [robot_state_publisher]: got segment wheel_right_link
+[turtlebot3_ros-3] [INFO] [1728089182.950781999] [turtlebot3_node]: Start Calibration of Gyro
+[sllidar_node-2] [INFO] [1728089183.293629490] [sllidar_node]: current scan mode: Standard, sample rate: 2 Khz, max_distance: 12.0 m, scan frequency:10.0 Hz, 
+[wifi_monitor-4] [INFO] [1728089183.615933139] [wifi_shutdown_monitor]: WiFi Monitor Node has started.
+[turtlebot3_ros-3] [INFO] [1728089187.951117143] [turtlebot3_node]: Calibration End
+[turtlebot3_ros-3] [INFO] [1728089187.951360592] [turtlebot3_node]: Add Motors
+[turtlebot3_ros-3] [INFO] [1728089187.952988849] [turtlebot3_node]: Add Wheels
+[turtlebot3_ros-3] [INFO] [1728089187.954474882] [turtlebot3_node]: Add Sensors
+[turtlebot3_ros-3] [INFO] [1728089187.965841694] [turtlebot3_node]: Succeeded to create battery state publisher
+[turtlebot3_ros-3] [INFO] [1728089187.970639213] [turtlebot3_node]: Succeeded to create imu publisher
+[turtlebot3_ros-3] [INFO] [1728089187.974760967] [turtlebot3_node]: Succeeded to create sensor state publisher
+[turtlebot3_ros-3] [INFO] [1728089187.977295036] [turtlebot3_node]: Succeeded to create joint state publisher
+[turtlebot3_ros-3] [INFO] [1728089187.977406812] [turtlebot3_node]: Add Devices
+[turtlebot3_ros-3] [INFO] [1728089187.977446477] [turtlebot3_node]: Succeeded to create motor power server
+[turtlebot3_ros-3] [INFO] [1728089187.980905145] [turtlebot3_node]: Succeeded to create reset server
+[turtlebot3_ros-3] [INFO] [1728089187.984028671] [turtlebot3_node]: Succeeded to create sound server
+[turtlebot3_ros-3] [INFO] [1728089187.987084621] [turtlebot3_node]: Run!
+[turtlebot3_ros-3] [INFO] [1728089188.032273901] [diff_drive_controller]: Init Odometry
+[turtlebot3_ros-3] [INFO] [1728089188.045799568] [diff_drive_controller]: Run!
+[wifi_monitor-4] [INFO] [1728089193.584068753] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089203.584801822] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089213.583939655] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089223.583348039] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089233.584510678] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089243.583842619] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089253.580546743] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089263.583480340] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089273.584042450] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089283.582783843] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089293.583246861] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089303.583712208] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089313.582035106] [wifi_shutdown_monitor]: Connected to TurtleNet
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2024-10-05-10-50-53-379266-ubuntu-3615
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_burger.urdf
+[INFO] [robot_state_publisher-1]: process started with pid [3677]
+[INFO] [sllidar_node-2]: process started with pid [3679]
+[INFO] [turtlebot3_ros-3]: process started with pid [3681]
+[INFO] [wifi_monitor-4]: process started with pid [3683]
+[sllidar_node-2] [INFO] [1728089453.907329879] [sllidar_node]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+[turtlebot3_ros-3] [INFO] [1728089453.917283877] [turtlebot3_node]: Init TurtleBot3 Node Main
+[turtlebot3_ros-3] [INFO] [1728089453.918022886] [turtlebot3_node]: Init DynamixelSDKWrapper
+[turtlebot3_ros-3] [INFO] [1728089453.921320842] [DynamixelSDKWrapper]: Succeeded to open the port(/dev/ttyACM0)!
+[sllidar_node-2] [INFO] [1728089453.923633553] [sllidar_node]: SLLidar S/N: AE8A9AF2C1EA9FC3BEEB9CF321593203
+[sllidar_node-2] [INFO] [1728089453.923762551] [sllidar_node]: Firmware Ver: 1.27
+[sllidar_node-2] [INFO] [1728089453.923801569] [sllidar_node]: Hardware Rev: 5
+[sllidar_node-2] [INFO] [1728089453.925595045] [sllidar_node]: SLLidar health status : 0
+[sllidar_node-2] [INFO] [1728089453.925714340] [sllidar_node]: SLLidar health status : OK.
+[turtlebot3_ros-3] [INFO] [1728089453.933207538] [DynamixelSDKWrapper]: Succeeded to change the baudrate!
+[robot_state_publisher-1] [INFO] [1728089453.947609978] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1728089453.947919714] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1728089453.947975047] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-1] [INFO] [1728089453.948002639] [robot_state_publisher]: got segment caster_back_link
+[robot_state_publisher-1] [INFO] [1728089453.948026287] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1728089453.948049287] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-1] [INFO] [1728089453.948071990] [robot_state_publisher]: got segment wheel_right_link
+[turtlebot3_ros-3] [INFO] [1728089453.970553991] [turtlebot3_node]: Start Calibration of Gyro
+[sllidar_node-2] [INFO] [1728089454.294725148] [sllidar_node]: current scan mode: Standard, sample rate: 2 Khz, max_distance: 12.0 m, scan frequency:10.0 Hz, 
+[wifi_monitor-4] [INFO] [1728089454.641215624] [wifi_shutdown_monitor]: WiFi Monitor Node has started.
+[turtlebot3_ros-3] [INFO] [1728089458.970961285] [turtlebot3_node]: Calibration End
+[turtlebot3_ros-3] [INFO] [1728089458.971165337] [turtlebot3_node]: Add Motors
+[turtlebot3_ros-3] [INFO] [1728089458.972352859] [turtlebot3_node]: Add Wheels
+[turtlebot3_ros-3] [INFO] [1728089458.973461048] [turtlebot3_node]: Add Sensors
+[turtlebot3_ros-3] [INFO] [1728089458.983312289] [turtlebot3_node]: Succeeded to create battery state publisher
+[turtlebot3_ros-3] [INFO] [1728089458.988275279] [turtlebot3_node]: Succeeded to create imu publisher
+[turtlebot3_ros-3] [INFO] [1728089458.992094062] [turtlebot3_node]: Succeeded to create sensor state publisher
+[turtlebot3_ros-3] [INFO] [1728089458.994517215] [turtlebot3_node]: Succeeded to create joint state publisher
+[turtlebot3_ros-3] [INFO] [1728089458.994643177] [turtlebot3_node]: Add Devices
+[turtlebot3_ros-3] [INFO] [1728089458.994686694] [turtlebot3_node]: Succeeded to create motor power server
+[turtlebot3_ros-3] [INFO] [1728089458.997806283] [turtlebot3_node]: Succeeded to create reset server
+[turtlebot3_ros-3] [INFO] [1728089459.000722004] [turtlebot3_node]: Succeeded to create sound server
+[turtlebot3_ros-3] [INFO] [1728089459.003654854] [turtlebot3_node]: Run!
+[turtlebot3_ros-3] [INFO] [1728089459.046642733] [diff_drive_controller]: Init Odometry
+[turtlebot3_ros-3] [INFO] [1728089459.060176906] [diff_drive_controller]: Run!
+[wifi_monitor-4] [INFO] [1728089464.609120941] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089474.608380328] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089484.610301346] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089494.608588134] [wifi_shutdown_monitor]: Connected to TurtleNet
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2024-10-05-10-51-47-270226-ubuntu-3746
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_burger.urdf
+[INFO] [robot_state_publisher-1]: process started with pid [3804]
+[INFO] [sllidar_node-2]: process started with pid [3806]
+[INFO] [turtlebot3_ros-3]: process started with pid [3808]
+[INFO] [wifi_monitor-4]: process started with pid [3810]
+[turtlebot3_ros-3] [INFO] [1728089507.858584721] [turtlebot3_node]: Init TurtleBot3 Node Main
+[turtlebot3_ros-3] [INFO] [1728089507.863039033] [turtlebot3_node]: Init DynamixelSDKWrapper
+[turtlebot3_ros-3] [INFO] [1728089507.868287686] [DynamixelSDKWrapper]: Succeeded to open the port(/dev/ttyACM0)!
+[sllidar_node-2] [INFO] [1728089507.877689784] [sllidar_node]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+[turtlebot3_ros-3] [INFO] [1728089507.878494329] [DynamixelSDKWrapper]: Succeeded to change the baudrate!
+[robot_state_publisher-1] [INFO] [1728089507.906173965] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1728089507.906974602] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1728089507.907052231] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-1] [INFO] [1728089507.907084360] [robot_state_publisher]: got segment caster_back_link
+[robot_state_publisher-1] [INFO] [1728089507.907166544] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1728089507.907322968] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-1] [INFO] [1728089507.907366967] [robot_state_publisher]: got segment wheel_right_link
+[sllidar_node-2] [INFO] [1728089507.910155486] [sllidar_node]: SLLidar S/N: AE8A9AF2C1EA9FC3BEEB9CF321593203
+[sllidar_node-2] [INFO] [1728089507.910281466] [sllidar_node]: Firmware Ver: 1.27
+[sllidar_node-2] [INFO] [1728089507.910321466] [sllidar_node]: Hardware Rev: 5
+[sllidar_node-2] [INFO] [1728089507.912978616] [sllidar_node]: SLLidar health status : 0
+[sllidar_node-2] [INFO] [1728089507.913116318] [sllidar_node]: SLLidar health status : OK.
+[turtlebot3_ros-3] [INFO] [1728089507.918747225] [turtlebot3_node]: Start Calibration of Gyro
+[sllidar_node-2] [INFO] [1728089508.279553808] [sllidar_node]: current scan mode: Standard, sample rate: 2 Khz, max_distance: 12.0 m, scan frequency:10.0 Hz, 
+[wifi_monitor-4] [INFO] [1728089508.557608166] [wifi_shutdown_monitor]: WiFi Monitor Node has started.
+[turtlebot3_ros-3] [INFO] [1728089512.919054002] [turtlebot3_node]: Calibration End
+[turtlebot3_ros-3] [INFO] [1728089512.919245222] [turtlebot3_node]: Add Motors
+[turtlebot3_ros-3] [INFO] [1728089512.920867978] [turtlebot3_node]: Add Wheels
+[turtlebot3_ros-3] [INFO] [1728089512.922216757] [turtlebot3_node]: Add Sensors
+[turtlebot3_ros-3] [INFO] [1728089512.933315962] [turtlebot3_node]: Succeeded to create battery state publisher
+[turtlebot3_ros-3] [INFO] [1728089512.938223120] [turtlebot3_node]: Succeeded to create imu publisher
+[turtlebot3_ros-3] [INFO] [1728089512.942655654] [turtlebot3_node]: Succeeded to create sensor state publisher
+[turtlebot3_ros-3] [INFO] [1728089512.945287175] [turtlebot3_node]: Succeeded to create joint state publisher
+[turtlebot3_ros-3] [INFO] [1728089512.945456043] [turtlebot3_node]: Add Devices
+[turtlebot3_ros-3] [INFO] [1728089512.945500191] [turtlebot3_node]: Succeeded to create motor power server
+[turtlebot3_ros-3] [INFO] [1728089512.948969460] [turtlebot3_node]: Succeeded to create reset server
+[turtlebot3_ros-3] [INFO] [1728089512.951899273] [turtlebot3_node]: Succeeded to create sound server
+[turtlebot3_ros-3] [INFO] [1728089512.954881419] [turtlebot3_node]: Run!
+[turtlebot3_ros-3] [INFO] [1728089513.003940255] [diff_drive_controller]: Init Odometry
+[turtlebot3_ros-3] [INFO] [1728089513.019554105] [diff_drive_controller]: Run!
+[wifi_monitor-4] [INFO] [1728089518.524331240] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089528.524857739] [wifi_shutdown_monitor]: Connected to TurtleNet
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2024-02-20-06-49-23-485518-ubuntu-706
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_burger.urdf
+[INFO] [robot_state_publisher-1]: process started with pid [1021]
+[INFO] [sllidar_node-2]: process started with pid [1023]
+[INFO] [turtlebot3_ros-3]: process started with pid [1025]
+[INFO] [wifi_monitor-4]: process started with pid [1027]
+[turtlebot3_ros-3] [INFO] [1708375764.656883569] [turtlebot3_node]: Init TurtleBot3 Node Main
+[turtlebot3_ros-3] [INFO] [1708375764.658857450] [turtlebot3_node]: Init DynamixelSDKWrapper
+[turtlebot3_ros-3] [INFO] [1708375764.670460094] [DynamixelSDKWrapper]: Succeeded to open the port(/dev/ttyACM0)!
+[turtlebot3_ros-3] [INFO] [1708375764.688752946] [DynamixelSDKWrapper]: Succeeded to change the baudrate!
+[sllidar_node-2] [INFO] [1708375764.703683601] [sllidar_node]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+[turtlebot3_ros-3] [INFO] [1708375764.726357562] [turtlebot3_node]: Start Calibration of Gyro
+[sllidar_node-2] [INFO] [1708375764.741368845] [sllidar_node]: SLLidar S/N: AE8A9AF2C1EA9FC3BEEB9CF321593203
+[sllidar_node-2] [INFO] [1708375764.741535843] [sllidar_node]: Firmware Ver: 1.27
+[sllidar_node-2] [INFO] [1708375764.741571861] [sllidar_node]: Hardware Rev: 5
+[robot_state_publisher-1] [INFO] [1708375764.743063416] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1708375764.743724981] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1708375764.743826795] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-1] [INFO] [1708375764.743861590] [robot_state_publisher]: got segment caster_back_link
+[robot_state_publisher-1] [INFO] [1708375764.743888349] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1708375764.743914534] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-1] [INFO] [1708375764.743938478] [robot_state_publisher]: got segment wheel_right_link
+[sllidar_node-2] [INFO] [1708375764.748709508] [sllidar_node]: SLLidar health status : 0
+[sllidar_node-2] [INFO] [1708375764.748840210] [sllidar_node]: SLLidar health status : OK.
+[sllidar_node-2] [INFO] [1708375765.126421109] [sllidar_node]: current scan mode: Standard, sample rate: 2 Khz, max_distance: 12.0 m, scan frequency:10.0 Hz, 
+[wifi_monitor-4] [INFO] [1708375765.207784056] [wifi_shutdown_monitor]: WiFi Monitor Node has started.
+[turtlebot3_ros-3] [INFO] [1708375769.726697134] [turtlebot3_node]: Calibration End
+[turtlebot3_ros-3] [INFO] [1708375769.726967186] [turtlebot3_node]: Add Motors
+[turtlebot3_ros-3] [INFO] [1708375769.728663331] [turtlebot3_node]: Add Wheels
+[turtlebot3_ros-3] [INFO] [1708375769.729518930] [turtlebot3_node]: Add Sensors
+[turtlebot3_ros-3] [INFO] [1708375769.801547723] [turtlebot3_node]: Succeeded to create battery state publisher
+[turtlebot3_ros-3] [INFO] [1708375769.807276592] [turtlebot3_node]: Succeeded to create imu publisher
+[turtlebot3_ros-3] [INFO] [1708375769.817199813] [turtlebot3_node]: Succeeded to create sensor state publisher
+[turtlebot3_ros-3] [INFO] [1708375769.819482987] [turtlebot3_node]: Succeeded to create joint state publisher
+[turtlebot3_ros-3] [INFO] [1708375769.819618466] [turtlebot3_node]: Add Devices
+[turtlebot3_ros-3] [INFO] [1708375769.819663744] [turtlebot3_node]: Succeeded to create motor power server
+[turtlebot3_ros-3] [INFO] [1708375769.822517484] [turtlebot3_node]: Succeeded to create reset server
+[turtlebot3_ros-3] [INFO] [1708375769.825217300] [turtlebot3_node]: Succeeded to create sound server
+[turtlebot3_ros-3] [INFO] [1708375769.827767359] [turtlebot3_node]: Run!
+[turtlebot3_ros-3] [INFO] [1708375769.873429536] [diff_drive_controller]: Init Odometry
+[turtlebot3_ros-3] [INFO] [1708375769.891842497] [diff_drive_controller]: Run!
+[wifi_monitor-4] [INFO] [1708375775.171613798] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375785.172243000] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375795.172154729] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375805.173134538] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375815.172052040] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375825.173349455] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375835.172100459] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375845.172328203] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375855.172169137] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375865.172419215] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375875.172039744] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375885.172964979] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375895.174031527] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375905.172914289] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375915.172766482] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375925.173008152] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375935.172051689] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375945.173837376] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375955.172894043] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375965.172020764] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375975.171205355] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375985.172654657] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375995.172308909] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376005.172482876] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376015.174301988] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376025.172377834] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376035.172454580] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376045.174166582] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089864.307064304] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089865.173295473] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089875.173064630] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089885.172597643] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089895.173730875] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089905.168628782] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089915.172876436] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089925.172291894] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089935.172038015] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089945.172384257] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089955.172143082] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089965.173371331] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089975.172257241] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089985.172918257] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728089995.173258999] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090005.172122706] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090015.172879842] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090025.173653319] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090035.172622080] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090045.173257022] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090055.172274653] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090065.172959706] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728090075.172424256] [wifi_shutdown_monitor]: Connected to TurtleNet

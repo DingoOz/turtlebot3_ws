@@ -122,4 +122,11 @@ def generate_launch_description():
             parameters=[tb3_param_dir],
             arguments=['-i', usb_port],
             output='screen'),
+
+        # Add the WiFi shutdown monitor node
+        Node(
+            package='wifi_shutdown_monitor',
+            executable='wifi_monitor',
+            name='wifi_shutdown_monitor',
+            output='screen'),
     ])

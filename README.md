@@ -28,6 +28,52 @@ wifi_shutdown_monitor requires: wireless-tools
 slamtool_box is required: sudo apt install ros-humble-slam-toolbox
 
 
+##Setting up the systemd service
+There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to 
+create a systemd service from this file that will automatically run on startup you can follow these 
+steps. This will result in the robot being ready as soon as it is booted and without and need to ssh 
+into it or similar.
+
+1 - Edit the start_turtlebot3.sh file and change the username and directories if needed
+2 - Make sure the script is executable
+3 - Create a service file:
+	3.1 - sudo nano /etc/systemd/system/turtlebot3.service
+	3.2 - add the following
+
+```
+[Unit]
+Description=TurtleBot3 Bringup Service
+After=network.target
+
+[Service]
+Type=simple
+User=username
+WorkingDirectory=/home/username
+ExecStart=/home/ubuntu/turtblebot3_ws/start_turtlebot3.sh
+Restart=on-failure
+Environment=ROS_DOMAIN_ID=30  # Optional, depending on your setup
+
+[Install]
+WantedBy=multi-user.target
+```
+
+4 - Reload the daemon
+```
+sudo systemctl daemon-reload
+```
+
+5 - Enable the service to start on boot
+```
+sudo systemctl enable turtlebot3.service
+```
+
+6 - Start the service (or reboot)
+```
+sudo systemctl start turtlebot3.service
+```
+
+
+
 ## Usage
 [Add usage instructions here]
 
