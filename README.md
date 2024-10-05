@@ -27,6 +27,9 @@ wifi_shutdown_monitor requires: wireless-tools
 
 slamtool_box is required: sudo apt install ros-humble-slam-toolbox
 
+sudo apt install ros-humble-nav2-bringup
+
+<<<<<<< HEAD
 
 ##Setting up the systemd service
 There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to 
@@ -74,6 +77,9 @@ sudo systemctl start turtlebot3.service
 
 
 
+=======
+sudo apt install ros-humble-nav2-bringup
+>>>>>>> 11fc59686f1ca332a4f79d2f55ec442ae1d5b980
 ## Usage
 [Add usage instructions here]
 
