@@ -1,7 +1,9 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+import os
 
 def generate_launch_description():
+    os.environ['ROS_DOMAIN_ID'] = '30'
     return LaunchDescription([
         Node(
             package='depthai_ros_driver',
