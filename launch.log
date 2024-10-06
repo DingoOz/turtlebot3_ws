@@ -284,3 +284,841 @@ urdf_file_name : turtlebot3_burger.urdf
 [wifi_monitor-4] [INFO] [1728090435.171678126] [wifi_shutdown_monitor]: Connected to TurtleNet
 [wifi_monitor-4] [INFO] [1728090445.173196594] [wifi_shutdown_monitor]: Connected to TurtleNet
 [wifi_monitor-4] [INFO] [1728090455.172155725] [wifi_shutdown_monitor]: Connected to TurtleNet
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2024-02-20-06-49-24-264838-ubuntu-719
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_burger.urdf
+[INFO] [robot_state_publisher-1]: process started with pid [1000]
+[INFO] [sllidar_node-2]: process started with pid [1002]
+[INFO] [turtlebot3_ros-3]: process started with pid [1004]
+[INFO] [wifi_monitor-4]: process started with pid [1006]
+[turtlebot3_ros-3] [INFO] [1708375765.362416346] [turtlebot3_node]: Init TurtleBot3 Node Main
+[turtlebot3_ros-3] [INFO] [1708375765.364487504] [turtlebot3_node]: Init DynamixelSDKWrapper
+[turtlebot3_ros-3] [INFO] [1708375765.370337076] [DynamixelSDKWrapper]: Succeeded to open the port(/dev/ttyACM0)!
+[turtlebot3_ros-3] [INFO] [1708375765.379170774] [DynamixelSDKWrapper]: Succeeded to change the baudrate!
+[sllidar_node-2] [INFO] [1708375765.390549883] [sllidar_node]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+[sllidar_node-2] [INFO] [1708375765.410536657] [sllidar_node]: SLLidar S/N: AE8A9AF2C1EA9FC3BEEB9CF321593203
+[sllidar_node-2] [INFO] [1708375765.410694081] [sllidar_node]: Firmware Ver: 1.27
+[sllidar_node-2] [INFO] [1708375765.410734173] [sllidar_node]: Hardware Rev: 5
+[sllidar_node-2] [INFO] [1708375765.412627167] [sllidar_node]: SLLidar health status : 0
+[sllidar_node-2] [INFO] [1708375765.412762684] [sllidar_node]: SLLidar health status : OK.
+[turtlebot3_ros-3] [INFO] [1708375765.416569541] [turtlebot3_node]: Start Calibration of Gyro
+[robot_state_publisher-1] [INFO] [1708375765.428745047] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1708375765.429118672] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1708375765.429185745] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-1] [INFO] [1708375765.429215948] [robot_state_publisher]: got segment caster_back_link
+[robot_state_publisher-1] [INFO] [1708375765.429241948] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1708375765.429267355] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-1] [INFO] [1708375765.429290762] [robot_state_publisher]: got segment wheel_right_link
+[sllidar_node-2] [INFO] [1708375765.794443825] [sllidar_node]: current scan mode: Standard, sample rate: 2 Khz, max_distance: 12.0 m, scan frequency:10.0 Hz, 
+[wifi_monitor-4] [INFO] [1708375765.843180646] [wifi_shutdown_monitor]: WiFi Monitor Node has started.
+[turtlebot3_ros-3] [INFO] [1708375770.416887984] [turtlebot3_node]: Calibration End
+[turtlebot3_ros-3] [INFO] [1708375770.417086593] [turtlebot3_node]: Add Motors
+[turtlebot3_ros-3] [INFO] [1708375770.417788621] [turtlebot3_node]: Add Wheels
+[turtlebot3_ros-3] [INFO] [1708375770.418539351] [turtlebot3_node]: Add Sensors
+[turtlebot3_ros-3] [INFO] [1708375770.437537601] [turtlebot3_node]: Succeeded to create battery state publisher
+[turtlebot3_ros-3] [INFO] [1708375770.442037709] [turtlebot3_node]: Succeeded to create imu publisher
+[turtlebot3_ros-3] [INFO] [1708375770.451830432] [turtlebot3_node]: Succeeded to create sensor state publisher
+[turtlebot3_ros-3] [INFO] [1708375770.453805720] [turtlebot3_node]: Succeeded to create joint state publisher
+[turtlebot3_ros-3] [INFO] [1708375770.453933422] [turtlebot3_node]: Add Devices
+[turtlebot3_ros-3] [INFO] [1708375770.453976144] [turtlebot3_node]: Succeeded to create motor power server
+[turtlebot3_ros-3] [INFO] [1708375770.456754515] [turtlebot3_node]: Succeeded to create reset server
+[turtlebot3_ros-3] [INFO] [1708375770.459238890] [turtlebot3_node]: Succeeded to create sound server
+[turtlebot3_ros-3] [INFO] [1708375770.461699117] [turtlebot3_node]: Run!
+[turtlebot3_ros-3] [INFO] [1708375770.500053260] [diff_drive_controller]: Init Odometry
+[turtlebot3_ros-3] [INFO] [1708375770.516579375] [diff_drive_controller]: Run!
+[wifi_monitor-4] [INFO] [1708375775.808049671] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375785.802509139] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [WARN] [1708375795.803976755] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 10.00 seconds
+[wifi_monitor-4] [INFO] [1708375805.799676670] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375815.803679365] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375825.802292593] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375835.803591934] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375845.803940787] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [WARN] [1708375855.802700329] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 10.00 seconds
+[wifi_monitor-4] [WARN] [1708375865.802549059] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 20.00 seconds
+[wifi_monitor-4] [WARN] [1708375875.803173761] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 30.00 seconds
+[wifi_monitor-4] [WARN] [1708375885.803473133] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 40.00 seconds
+[wifi_monitor-4] [WARN] [1708375895.803696692] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 50.00 seconds
+[wifi_monitor-4] [WARN] [1708375905.803841308] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 60.00 seconds
+[wifi_monitor-4] [WARN] [1708375915.802458036] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 70.00 seconds
+[wifi_monitor-4] [WARN] [1708375925.803155959] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 80.00 seconds
+[wifi_monitor-4] [WARN] [1708375935.803813253] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 90.00 seconds
+[wifi_monitor-4] [WARN] [1708375945.803789500] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 100.00 seconds
+[wifi_monitor-4] [WARN] [1708375955.802440561] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 110.00 seconds
+[wifi_monitor-4] [WARN] [1708375965.803747254] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 120.00 seconds
+[wifi_monitor-4] [WARN] [1708375975.803343599] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 130.00 seconds
+[wifi_monitor-4] [WARN] [1708375985.803436511] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 140.00 seconds
+[wifi_monitor-4] [WARN] [1708375995.803499758] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 150.00 seconds
+[wifi_monitor-4] [WARN] [1708376005.802904327] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 160.00 seconds
+[wifi_monitor-4] [WARN] [1708376015.803164182] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 170.00 seconds
+[wifi_monitor-4] [WARN] [1708376025.804429153] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 180.00 seconds
+[wifi_monitor-4] [WARN] [1708376035.802915439] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 190.00 seconds
+[wifi_monitor-4] [WARN] [1708376045.802999814] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 200.00 seconds
+[wifi_monitor-4] [WARN] [1708376055.804084695] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 210.00 seconds
+[wifi_monitor-4] [WARN] [1708376065.802240189] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 220.00 seconds
+[wifi_monitor-4] [WARN] [1708376075.803788230] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 230.00 seconds
+[wifi_monitor-4] [WARN] [1708376085.802565086] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 240.00 seconds
+[wifi_monitor-4] [WARN] [1708376095.802815792] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 250.00 seconds
+[wifi_monitor-4] [WARN] [1708376105.803454013] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 260.00 seconds
+[wifi_monitor-4] [WARN] [1708376115.803521592] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 270.00 seconds
+[wifi_monitor-4] [WARN] [1708376125.803047049] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 280.00 seconds
+[wifi_monitor-4] [WARN] [1708376135.803261534] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 290.00 seconds
+[wifi_monitor-4] [WARN] [1708376145.803199782] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 300.00 seconds
+[wifi_monitor-4] [ERROR] [1708376145.805871265] [wifi_shutdown_monitor]: WiFi connection to TurtleNet lost for more than 300 seconds. Shutting down...
+[wifi_monitor-4] [INFO] [1708376145.808707358] [wifi_shutdown_monitor]: Initiating shutdown sequence...
+[INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2024-02-20-06-49-26-509560-ubuntu-713
+[INFO] [launch]: Default logging verbosity is set to INFO
+urdf_file_name : turtlebot3_burger.urdf
+[INFO] [robot_state_publisher-1]: process started with pid [1025]
+[INFO] [sllidar_node-2]: process started with pid [1027]
+[INFO] [turtlebot3_ros-3]: process started with pid [1029]
+[INFO] [wifi_monitor-4]: process started with pid [1031]
+[turtlebot3_ros-3] [INFO] [1708375767.622680333] [turtlebot3_node]: Init TurtleBot3 Node Main
+[turtlebot3_ros-3] [INFO] [1708375767.624606659] [turtlebot3_node]: Init DynamixelSDKWrapper
+[turtlebot3_ros-3] [INFO] [1708375767.629723222] [DynamixelSDKWrapper]: Succeeded to open the port(/dev/ttyACM0)!
+[turtlebot3_ros-3] [INFO] [1708375767.637472564] [DynamixelSDKWrapper]: Succeeded to change the baudrate!
+[sllidar_node-2] [INFO] [1708375767.650473004] [sllidar_node]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+[sllidar_node-2] [INFO] [1708375767.671127306] [sllidar_node]: SLLidar S/N: AE8A9AF2C1EA9FC3BEEB9CF321593203
+[sllidar_node-2] [INFO] [1708375767.672804117] [sllidar_node]: Firmware Ver: 1.27
+[sllidar_node-2] [INFO] [1708375767.674510002] [sllidar_node]: Hardware Rev: 5
+[turtlebot3_ros-3] [INFO] [1708375767.675198141] [turtlebot3_node]: Start Calibration of Gyro
+[sllidar_node-2] [INFO] [1708375767.679103201] [sllidar_node]: SLLidar health status : 0
+[sllidar_node-2] [INFO] [1708375767.679246810] [sllidar_node]: SLLidar health status : OK.
+[robot_state_publisher-1] [INFO] [1708375767.691234838] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1708375767.691774627] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1708375767.691868718] [robot_state_publisher]: got segment base_scan
+[robot_state_publisher-1] [INFO] [1708375767.691900847] [robot_state_publisher]: got segment caster_back_link
+[robot_state_publisher-1] [INFO] [1708375767.691924958] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1708375767.691947550] [robot_state_publisher]: got segment wheel_left_link
+[robot_state_publisher-1] [INFO] [1708375767.691969846] [robot_state_publisher]: got segment wheel_right_link
+[sllidar_node-2] [INFO] [1708375768.047374945] [sllidar_node]: current scan mode: Standard, sample rate: 2 Khz, max_distance: 12.0 m, scan frequency:10.0 Hz, 
+[wifi_monitor-4] [INFO] [1708375768.074829269] [wifi_shutdown_monitor]: WiFi Monitor Node has started.
+[turtlebot3_ros-3] [INFO] [1708375772.675517974] [turtlebot3_node]: Calibration End
+[turtlebot3_ros-3] [INFO] [1708375772.675712045] [turtlebot3_node]: Add Motors
+[turtlebot3_ros-3] [INFO] [1708375772.676460498] [turtlebot3_node]: Add Wheels
+[turtlebot3_ros-3] [INFO] [1708375772.677265636] [turtlebot3_node]: Add Sensors
+[turtlebot3_ros-3] [INFO] [1708375772.698441320] [turtlebot3_node]: Succeeded to create battery state publisher
+[turtlebot3_ros-3] [INFO] [1708375772.702948853] [turtlebot3_node]: Succeeded to create imu publisher
+[turtlebot3_ros-3] [INFO] [1708375772.713873580] [turtlebot3_node]: Succeeded to create sensor state publisher
+[turtlebot3_ros-3] [INFO] [1708375772.716454435] [turtlebot3_node]: Succeeded to create joint state publisher
+[turtlebot3_ros-3] [INFO] [1708375772.716591988] [turtlebot3_node]: Add Devices
+[turtlebot3_ros-3] [INFO] [1708375772.716653673] [turtlebot3_node]: Succeeded to create motor power server
+[turtlebot3_ros-3] [INFO] [1708375772.719661392] [turtlebot3_node]: Succeeded to create reset server
+[turtlebot3_ros-3] [INFO] [1708375772.722156730] [turtlebot3_node]: Succeeded to create sound server
+[turtlebot3_ros-3] [INFO] [1708375772.724338535] [turtlebot3_node]: Run!
+[turtlebot3_ros-3] [INFO] [1708375772.763263559] [diff_drive_controller]: Init Odometry
+[turtlebot3_ros-3] [INFO] [1708375772.779795397] [diff_drive_controller]: Run!
+[wifi_monitor-4] [INFO] [1708375778.043053953] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375788.038348373] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [WARN] [1708375798.039689232] [wifi_shutdown_monitor]: Not connected to TurtleNet. Time since last connection: 10.00 seconds
+[wifi_monitor-4] [INFO] [1708375808.038515661] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375818.038743627] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375828.038509377] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375838.038120240] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375848.038222412] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375858.038287362] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375868.037815245] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375878.037931527] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375888.038000051] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375898.037175957] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375908.039276417] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375918.037802832] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375928.037784061] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375938.037446683] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375948.037660408] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375958.037372233] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375968.037612107] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375978.038558156] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375988.039096174] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708375998.038012287] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376008.037753945] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376018.038040651] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376028.038093564] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376038.038686044] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1708376048.037551121] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186069.833741442] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186078.035765435] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186088.037788582] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186098.035972705] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186108.036826070] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186118.037031222] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186128.036909989] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186138.036577702] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186148.037516038] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186158.036508077] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186168.038406420] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186178.038216623] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186188.037847356] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186198.038019249] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186208.038025829] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186218.039285652] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186228.038148174] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186238.037554484] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186248.038242055] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186258.038740092] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186268.038621952] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186278.039502854] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186288.038990886] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186298.038660044] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186308.038553200] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186318.037714014] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186328.038719396] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186338.038305815] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186348.038790407] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186358.038774821] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186368.037839118] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186378.037595683] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186388.039862641] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186398.038550998] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186408.038180231] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186418.039234112] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186428.039380820] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186438.039046887] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186448.039105651] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186458.037991191] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186468.037720590] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186478.037803039] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186488.037874518] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186498.038576554] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186508.037587953] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186518.036392288] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186528.037655356] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186538.037207407] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186548.037887599] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186558.037983711] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186568.037941478] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186578.038890282] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186588.037823643] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186598.038619466] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186608.037890584] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186618.038292491] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186628.038641178] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186638.037605735] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186648.039841841] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186658.037544655] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186668.038404687] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186678.038744152] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186688.038144981] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186698.037573773] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186708.037752610] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186718.039312540] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186728.038761591] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186738.037025638] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186748.037910911] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186758.038843849] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186768.038713265] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186778.038552347] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186788.037974102] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186798.037854925] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186808.038404053] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186818.039847189] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186828.038007349] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186838.039141840] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186848.038295098] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186858.038874496] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186868.037701416] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186878.038607139] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186888.038702575] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186898.037797135] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186908.037455221] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186918.035793984] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186928.037100057] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186938.038108487] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186948.037336516] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186958.038548267] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186968.038678629] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186978.038827574] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186988.033779780] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728186998.038472466] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187008.034713454] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187018.035534575] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187028.036301905] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187038.038133109] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187048.039795149] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187058.041119027] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187068.039512147] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187078.038220911] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187088.037790126] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187098.036043248] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187108.035566113] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187118.037374114] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187128.038702028] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187138.037745492] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187148.035263790] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187158.038528383] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187168.036030737] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187178.037296264] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187188.038224054] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187198.036785098] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187208.035718341] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187218.037017413] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187228.033795095] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187238.034015619] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187248.034338527] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187258.039633020] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187268.039414126] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187278.039223988] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187288.039628212] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187298.037951406] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187308.033784443] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187318.035467605] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187328.039042150] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187338.034085396] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187348.038250321] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187358.039148786] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187368.038915645] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187378.039009330] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187388.037617588] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187398.035654938] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187408.039428488] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187418.037271985] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187428.037569139] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187438.040810022] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187448.040267323] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187458.037831036] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187468.033096538] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187478.037695618] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187488.039865869] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187498.038121530] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187508.034331028] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187518.034735753] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187528.036023641] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187538.037935382] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187548.035877211] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187558.037015758] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187568.038452155] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187578.034438293] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187588.035631813] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187598.039675443] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187608.037509817] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187618.039663788] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187628.034347225] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187638.040303151] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187648.037560044] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187658.037626346] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187668.037953496] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187678.039709153] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187688.039397575] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187698.038640226] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187708.039912483] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187718.039417388] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187728.040083493] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187738.040262774] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187748.040698368] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187758.037954558] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187768.036035491] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187778.037533521] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187788.038118871] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187798.037453364] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187808.037142859] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187818.040503248] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187828.033722270] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187838.039086851] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187848.038700682] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187858.038674735] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187868.038728470] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187878.038280258] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187888.039169249] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187898.039036876] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187908.038256464] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187918.040508385] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187928.038611588] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187938.036943823] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187948.033629886] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187958.038336520] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187968.038796253] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187978.038866556] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187988.039632271] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728187998.035879936] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188008.040029465] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188018.039782984] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188028.040292889] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188038.038019589] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188048.040341969] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188058.036058154] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188068.038800145] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188078.035339063] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188088.038187601] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188098.037173584] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188108.038451536] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188118.036271201] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188128.036639721] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188138.037595085] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188148.036012760] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188158.037515303] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188168.039069399] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188178.036068630] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188188.035945583] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188198.035206469] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188208.038270435] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188218.039370852] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188228.035931811] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188238.037720627] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188248.038167054] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188258.037496736] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188268.037660333] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188278.038173684] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188288.035276266] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188298.037649760] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188308.038768844] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188318.038615908] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188328.037142675] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188338.038423349] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188348.037530349] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188358.037446708] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188368.039712536] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188378.038501485] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188388.039516533] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188398.040403306] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188408.039539712] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188418.039273907] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188428.039367912] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188438.037554424] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188448.039554144] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188458.038682069] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188468.037625478] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188478.037637503] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188488.040418899] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188498.038521726] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188508.039978639] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188518.039423820] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188528.039688452] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188538.039578700] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188548.036872316] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188558.038541560] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188568.038312866] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188578.038404594] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188588.039397309] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188598.038675862] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188608.040331680] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188618.037979292] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188628.039082191] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188638.039749781] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188648.037435234] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188658.038663384] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188668.034344452] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188678.040258992] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188688.034290243] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188698.033062025] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188708.039664481] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188718.038682908] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188728.039226315] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188738.034192850] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188748.034368132] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188758.039443720] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188768.040583378] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188778.039337715] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188788.040391078] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188798.037967857] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188808.040491701] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188818.040757796] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188828.036833465] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188838.039768507] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188848.034300141] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188858.035986755] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188868.033532701] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188878.039871365] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188888.034255260] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188898.039173960] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188908.038935340] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188918.040481567] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188928.036811436] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188938.040277749] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188948.040471012] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188958.039182424] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188968.035875029] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188978.039885723] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188988.034203063] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728188998.039420557] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189008.040327810] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189018.040492817] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189028.040507741] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189038.037796622] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189048.040414723] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189058.038682530] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189068.039344880] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189078.038662358] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189088.038970916] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189098.040063612] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189108.038636285] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189118.039299764] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189128.038911239] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189138.039912935] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189148.040431305] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189158.039864375] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189168.040237543] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189178.038157780] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189188.038793797] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189198.038800673] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189208.039025380] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189218.036841212] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189228.038686101] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189238.039609706] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189248.038787890] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189258.039417259] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189268.038271595] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189278.039758285] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189288.040345636] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189298.038387890] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189308.039754100] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189318.040486356] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189328.040534084] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189338.039632010] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189348.039397704] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189358.034247093] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189368.039993592] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189378.040487120] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189388.039133859] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189398.035045583] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189408.034153751] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189418.035736142] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189428.039018119] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189438.040272257] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189448.040110002] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189458.040577961] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189468.039138919] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189478.039963737] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189488.040225670] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189498.039115458] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189508.037457690] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189518.037781451] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189528.039620822] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189538.038637101] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189548.038916048] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189558.038442339] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189568.038738545] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189578.040011460] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189588.039836543] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189598.039672551] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189608.039981924] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189618.038805112] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189628.038621084] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189638.037157684] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189648.039339754] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189658.040120324] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189668.038777366] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189678.038888815] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189688.039920049] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189698.038133690] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189708.039188404] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189718.039832661] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189728.036462564] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189738.040079182] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189748.038310001] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189758.039092935] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189768.039232885] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189778.040732025] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189788.038087275] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189798.039335063] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189808.034301909] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189818.036533822] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189828.040483760] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189838.038688221] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189848.036881541] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189858.034992421] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189868.040089363] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189878.037292190] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189888.039021306] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189898.038558213] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189908.036891997] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189918.039585821] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189928.039958502] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189938.040169860] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189948.040407629] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189958.039953699] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189968.035435447] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189978.038474797] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189988.038175531] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728189998.036502689] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190008.038260932] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190018.038870430] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190028.034691455] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190038.039233512] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190048.037181083] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190058.036803261] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190068.038152268] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190078.036005784] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190088.035568383] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190098.039176463] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190108.039067531] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190118.037573091] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190128.034320406] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190138.039382156] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190148.036661713] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190158.040192533] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190168.038304512] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190178.036330042] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190188.037033672] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190198.035908412] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190208.035527347] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190218.040017134] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190228.038053466] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190238.039003734] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190248.039379148] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190258.037650372] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190268.038105843] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190278.034769248] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190288.037770067] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190298.036874881] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190308.036970572] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190318.034705274] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190328.035542344] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190338.037491343] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190348.037169483] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190358.037740889] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190368.037821265] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190378.037506090] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190388.034419896] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190398.034007575] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190408.035573208] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190418.035497512] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190428.034721992] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190438.037950196] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190448.037723020] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190458.034506758] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190468.038001337] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190478.039211237] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190488.039875640] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190498.034344205] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190508.034471513] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190518.033804266] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190528.038671732] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190538.040105295] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190548.033906351] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190558.035386261] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190568.038771859] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190578.040342260] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190588.039323878] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190598.040775099] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190608.038411665] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190618.039481750] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190628.040449614] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190638.038275074] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190648.034302040] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190658.039134446] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190668.035104449] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190678.039183069] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190688.039388665] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190698.039057731] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190708.035173826] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190718.039760864] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190728.038698922] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190738.039260513] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190748.038479548] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190758.037715009] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190768.038099566] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190778.039801106] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190788.033158903] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190798.039924598] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190808.033969474] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190818.037490030] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190828.033063015] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190838.038509990] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190848.040508286] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190858.039001859] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190868.038330986] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190878.037047760] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190888.040111853] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190898.037849243] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190908.039638290] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190918.037634065] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190928.034276533] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190938.038734638] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190948.038119330] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190958.038234469] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190968.039315187] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190978.038432575] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190988.039323347] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728190998.037563395] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191008.035532984] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191018.036111316] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191028.039364835] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191038.035822388] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191048.039382662] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191058.037907817] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191068.037656419] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191078.037493132] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191088.037572544] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191098.037329721] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191108.037620446] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191118.039509668] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191128.037033003] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191138.038193661] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191148.032255375] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191158.031624704] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191168.038168958] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191178.038725023] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191188.039332548] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191198.039403940] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191208.039391320] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191218.036785735] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191228.036391625] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191238.034284229] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191248.035650845] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191258.035329661] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191268.040560071] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191278.038052087] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191288.039449371] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191298.039659819] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191308.039122258] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191318.039330243] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191328.039262732] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191338.033287150] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191348.039059136] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191358.039128660] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191368.039828064] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191378.039283540] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191388.038748016] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191398.038429230] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191408.040065548] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191418.039183788] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191428.039699214] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191438.039145560] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191448.038948643] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191458.039535234] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191468.039458945] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191478.039470803] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191488.038594358] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191498.038764046] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191508.039348156] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191518.038770114] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191528.039813737] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191538.038942342] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191548.037112646] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191558.037353662] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191568.039099540] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191578.036405745] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191588.036750580] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191598.037732851] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191608.036498151] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191618.036317938] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191628.035695415] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191638.037073588] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191648.036288568] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191658.036555663] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191668.035897659] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191678.037119983] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191688.035949449] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191698.038473885] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191708.036629156] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191718.036698105] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191728.038397756] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191738.035956757] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191748.034776538] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191758.037886485] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191768.036926003] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191778.037773646] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191788.035598181] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191798.036047848] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191808.035768098] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191818.035085261] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191828.038605351] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191838.036436608] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191848.036329393] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191858.038423168] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191868.035894041] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191878.038375885] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191888.036424599] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191898.039227811] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191908.038012512] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191918.038887954] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191928.040317186] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191938.040213483] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191948.039974165] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191958.039258870] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191968.037968263] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191978.040066316] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191988.038047015] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728191998.038742809] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192008.039998965] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192018.040504964] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192028.039491447] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192038.039437268] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192048.039392886] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192058.040338065] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192068.039619858] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192078.039630309] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192088.038430182] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192098.039338750] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192108.040276374] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192118.039595148] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192128.039731282] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192138.031953242] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192148.036238989] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192158.032584173] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192168.031983002] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192178.032174079] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192188.032546822] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192198.032857453] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192208.039050600] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192218.039842540] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192228.039612994] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192238.040116920] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192248.039637579] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192258.039275931] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192268.036104066] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192278.038246970] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192288.032578180] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192298.032118674] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192308.031738926] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192318.032248722] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192328.032098082] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192338.032428843] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192348.032301129] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192358.039167656] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192368.038433728] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192378.040115990] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192388.039236360] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192398.039708582] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192408.035105482] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192418.038650535] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192428.038885760] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192438.039066097] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192448.038336446] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192458.039445512] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192468.033662984] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192478.033841395] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192488.038149178] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192498.036978959] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192508.039922797] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192518.038043828] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192528.038371719] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192538.040075906] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192548.041042937] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192558.040206324] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192568.040417569] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192578.039900767] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192588.040101215] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192598.040099258] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192608.040361699] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192618.039507367] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192628.039972430] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192638.038077628] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192648.034952101] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192658.039980115] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192668.037248213] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192678.040067719] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192688.039873339] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192698.039612960] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192708.037259682] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192718.040816364] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192728.033719482] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192738.038997178] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192748.036209536] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192758.040714724] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192768.039156288] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192778.035918689] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192788.038168036] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192798.034129818] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192808.035494825] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192818.037892429] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192828.038857997] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192838.033626516] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192848.034360476] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192858.040493716] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192868.040471112] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192878.040126400] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192888.039949798] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192898.040288781] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192908.039696462] [wifi_shutdown_monitor]: Connected to TurtleNet
+[wifi_monitor-4] [INFO] [1728192918.039954576] [wifi_shutdown_monitor]: Connected to TurtleNet
