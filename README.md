@@ -33,8 +33,30 @@ pip3 install depthai
 
 sudo apt install ros-humble-depthai-ros
 
-<<<<<<< HEAD
-##Setting up the systemd service
+
+### Setup the Oakd-lite udev rules
+```
+sudo nano /etc/udev/rules.d/80-movidius.rules
+```
+
+add the following to the file:
+```
+SUBSYSTEM=="usb", ATTR{idVendor}=="03e7", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="03e7", ATTR{idProduct}=="2485", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="03e7", ATTR{idProduct}=="f63b", MODE="0666"
+```
+
+```
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+Unplug and plug in the Oakd-lite.
+
+
+
+
+
+## Setting up the systemd service
 There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to 
 create a systemd service from this file that will automatically run on startup you can follow these 
 steps. This will result in the robot being ready as soon as it is booted and without and need to ssh 
