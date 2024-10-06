@@ -29,8 +29,11 @@ slamtool_box is required: sudo apt install ros-humble-slam-toolbox
 
 sudo apt install ros-humble-nav2-bringup
 
-<<<<<<< HEAD
+pip3 install depthai
 
+sudo apt install ros-humble-depthai-ros
+
+<<<<<<< HEAD
 ##Setting up the systemd service
 There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to 
 create a systemd service from this file that will automatically run on startup you can follow these 
