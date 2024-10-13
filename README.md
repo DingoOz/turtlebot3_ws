@@ -3,6 +3,12 @@
 This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar.
 
 ## Setup
+
+```
+sudo apt-get install libv4l-dev wireless-tools ros-humble-slam-toolbox ros-humble-nav2-bringup ros-humble-depthai-ros
+
+```
+
 0. sudo apt install libv4l-dev ros-humble-cv-bridge
 1. Clone this repository   
 2. Source ROS setup file: `source /opt/ros/humble/setup.bash`
