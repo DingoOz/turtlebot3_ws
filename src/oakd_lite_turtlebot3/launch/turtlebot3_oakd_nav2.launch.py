@@ -16,7 +16,7 @@ def generate_launch_description():
                 PathJoinSubstitution([
                     FindPackageShare('turtlebot3_bringup'),
                     'launch',
-                    'robot.launch.py'
+                    'dingo.robot.launch.py'
                 ])
             ])
         ),
