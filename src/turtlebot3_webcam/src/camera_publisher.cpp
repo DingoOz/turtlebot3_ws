@@ -10,7 +10,7 @@ class CameraPublisher : public rclcpp::Node
 public:
     CameraPublisher() : Node("camera_publisher")
     {
-        publisher_ = this->create_publisher<sensor_msgs::msg::Image>("webcam/image_raw", 10);
+        publisher_ = this->create_publisher<sensor_msgs::msg::Image>("/webcam/image_raw", 10);
         timer_ = this->create_wall_timer(std::chrono::milliseconds(33), std::bind(&CameraPublisher::timer_callback, this));
         
         std::string device_path = find_lifecam_device();
