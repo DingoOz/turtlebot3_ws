@@ -8,10 +8,15 @@
 class CameraPublisher : public rclcpp::Node
 {
 public:
-    CameraPublisher() : Node("camera_publisher")
+    CameraPublisher() : Node("camera_publisher"), frame_count_(0)
     {
+<<<<<<< HEAD
         publisher_ = this->create_publisher<sensor_msgs::msg::Image>("/webcam/image_raw", 10);
         timer_ = this->create_wall_timer(std::chrono::milliseconds(33), std::bind(&CameraPublisher::timer_callback, this));
+=======
+        publisher_ = this->create_publisher<sensor_msgs::msg::Image>("/webcam/image_raw", rclcpp::QoS(10).reliable().durability_volatile());
+        
+>>>>>>> 4e1c12a5c4e28a2b2ca454d670ce131b769a2d59
         
         std::string device_path = find_lifecam_device();
         if (device_path.empty()) {
@@ -22,37 +27,39 @@ public:
         
         RCLCPP_INFO(this->get_logger(), "Found LifeCam HD-3000 at: %s", device_path.c_str());
         
-        // Try to open the camera with V4L2 backend
         cap_.open(device_path, cv::CAP_V4L2);
         
         if (!cap_.isOpened()) {
             RCLCPP_ERROR(this->get_logger(), "Failed to open camera!");
             rclcpp::shutdown();
-        } else {
-            RCLCPP_INFO(this->get_logger(), "Camera opened successfully");
-            RCLCPP_INFO(this->get_logger(), "Camera backend: %s", cap_.getBackendName().c_str());
-            RCLCPP_INFO(this->get_logger(), "Camera FPS: %f", cap_.get(cv::CAP_PROP_FPS));
-            RCLCPP_INFO(this->get_logger(), "Camera resolution: %fx%f", cap_.get(cv::CAP_PROP_FRAME_WIDTH), cap_.get(cv::CAP_PROP_FRAME_HEIGHT));
-            
-            // Set camera properties
-            cap_.set(cv::CAP_PROP_FRAME_WIDTH, 640);
-            cap_.set(cv::CAP_PROP_FRAME_HEIGHT, 480);
-            cap_.set(cv::CAP_PROP_FPS, 30);
+            return;
         }
+
+        RCLCPP_INFO(this->get_logger(), "Camera opened successfully");
+        RCLCPP_INFO(this->get_logger(), "Camera backend: %s", cap_.getBackendName().c_str());
+
+        // Set camera properties
+        cap_.set(cv::CAP_PROP_FRAME_WIDTH, 640);
+        cap_.set(cv::CAP_PROP_FRAME_HEIGHT, 480);
+        cap_.set(cv::CAP_PROP_FPS, 30);
+        
+        // Verify settings
+        RCLCPP_INFO(this->get_logger(), "Camera FPS: %f", cap_.get(cv::CAP_PROP_FPS));
+        RCLCPP_INFO(this->get_logger(), "Camera resolution: %fx%f", 
+                    cap_.get(cv::CAP_PROP_FRAME_WIDTH), 
+                    cap_.get(cv::CAP_PROP_FRAME_HEIGHT));
+        
+        timer_ = this->create_wall_timer(
+            std::chrono::milliseconds(33), 
+            std::bind(&CameraPublisher::timer_callback, this));
+            
+        // Add status timer
+        status_timer_ = this->create_wall_timer(
+            std::chrono::seconds(5),
+            std::bind(&CameraPublisher::status_callback, this));
     }
 
 private:
-    void timer_callback()
-    {
-        cv::Mat frame;
-        if (cap_.read(frame)) {
-            auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", frame).toImageMsg();
-            publisher_->publish(*msg);
-        } else {
-            RCLCPP_WARN(this->get_logger(), "Failed to capture frame");
-        }
-    }
-
     std::string find_lifecam_device()
     {
         struct udev* udev = udev_new();
@@ -95,15 +102,61 @@ private:
         return result;
     }
 
+    void timer_callback()
+    {
+        cv::Mat frame;
+        if (cap_.read(frame)) {
+            if (frame.empty()) {
+                RCLCPP_WARN(this->get_logger(), "Captured frame is empty!");
+                return;
+            }
+            
+            try {
+                auto msg = cv_bridge::CvImage(std_msgs::msg::Header(), "bgr8", frame).toImageMsg();
+                msg->header.stamp = this->now();
+                msg->header.frame_id = "camera_frame";
+                publisher_->publish(*msg);
+                frame_count_++;
+                
+                if (frame_count_ % 30 == 0) {  // Log every 30 frames
+                    RCLCPP_INFO(this->get_logger(), "Published frame %d (%dx%d)", 
+                               frame_count_, frame.cols, frame.rows);
+                }
+            } catch (const std::exception& e) {
+                RCLCPP_ERROR(this->get_logger(), "Exception in publishing: %s", e.what());
+            }
+        } else {
+            RCLCPP_WARN(this->get_logger(), "Failed to capture frame");
+        }
+    }
+    
+    void status_callback()
+    {
+        RCLCPP_INFO(this->get_logger(), "Status Update - Total frames published: %d", frame_count_);
+        RCLCPP_INFO(this->get_logger(), "Publisher count: %zu", publisher_->get_subscription_count());
+    }
+
     rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
+    rclcpp::TimerBase::SharedPtr status_timer_;
     cv::VideoCapture cap_;
+    int frame_count_;
 };
 
 int main(int argc, char ** argv)
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<CameraPublisher>());
+    
+    // Set display variable if not set
+    if (!std::getenv("DISPLAY")) {
+        RCLCPP_WARN(rclcpp::get_logger("camera_publisher"), 
+                    "DISPLAY not set, setting to :0");
+        setenv("DISPLAY", ":0", 1);
+    }
+    
+    auto node = std::make_shared<CameraPublisher>();
+    rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
 }
+
