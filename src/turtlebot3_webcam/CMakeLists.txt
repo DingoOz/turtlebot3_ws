@@ -54,7 +54,7 @@ ament_target_dependencies(
   OpenCV
   std_msgs
 )
-target_link_libraries(camera_publisher 
+target_link_libraries(camera_publisher
   ${LIBUDEV_LIBRARIES}
   ${OpenCV_LIBRARIES}
   ${CURL_LIBRARIES}
@@ -105,4 +105,3 @@ install(DIRECTORY
 )
 
 ament_package()
-
