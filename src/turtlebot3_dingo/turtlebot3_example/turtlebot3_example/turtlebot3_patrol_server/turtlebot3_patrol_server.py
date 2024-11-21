@@ -20,23 +20,19 @@ import math
 import time
 
 from geometry_msgs.msg import Twist
-from rclpy.action import ActionServer
-from rclpy.action import CancelResponse
-from rclpy.action import GoalResponse
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.duration import Duration
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
-
-from turtlebot3_example.turtlebot3_patrol_server.turtlebot3_path \
-    import Turtlebot3Path
+from turtlebot3_example.turtlebot3_patrol_server.turtlebot3_path import Turtlebot3Path
 from turtlebot3_msgs.action import Patrol
 
 
 class Turtlebot3PatrolServer(Node):
 
-    def __init__(self):
-        super().__init__('turtlebot3_patrol_server')
+    def __init__(self) -> None:
+        super().__init__("turtlebot3_patrol_server")
 
         """************************************************************
         ** Initialise variables
@@ -49,40 +45,42 @@ class Turtlebot3PatrolServer(Node):
         qos = QoSProfile(depth=10)
 
         # Initialise publishers
-        self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', qos)
+        self.cmd_vel_pub = self.create_publisher(Twist, "cmd_vel", qos)
 
         # Initialise servers
         self.action_server = ActionServer(
             self,
             Patrol,
-            'patrol',
+            "patrol",
             execute_callback=self.execute_callback,
             callback_group=ReentrantCallbackGroup(),
             goal_callback=self.goal_callback,
-            cancel_callback=self.cancel_callback)
+            cancel_callback=self.cancel_callback,
+        )
 
         self.get_logger().info("Turtlebot3 patrol action server has been initialised.")
 
     """*******************************************************************************
     ** Callback functions and relevant functions
     *******************************************************************************"""
-    def destroy(self):
+
+    def destroy(self) -> None:
         self._action_server.destroy()
         super().destroy_node()
 
     def goal_callback(self, goal_request):
         # Accepts or rejects a client request to begin an action
-        self.get_logger().info('Received goal request :)')
+        self.get_logger().info("Received goal request :)")
         self.goal = goal_request
         return GoalResponse.ACCEPT
 
     def cancel_callback(self, goal_handle):
         # Accepts or rejects a client request to cancel an action
-        self.get_logger().info('Received cancel request :(')
+        self.get_logger().info("Received cancel request :(")
         return CancelResponse.ACCEPT
 
     async def execute_callback(self, goal_handle):
-        self.get_logger().info('Executing goal...')
+        self.get_logger().info("Executing goal...")
 
         radius = self.goal.radius  # unit: m
         speed = 0.5  # unit: m/s
@@ -93,10 +91,10 @@ class Turtlebot3PatrolServer(Node):
         last_time = self.get_clock().now()
 
         # Start executing an action
-        while (feedback_msg.left_time > 0):
+        while feedback_msg.left_time > 0:
             if goal_handle.is_cancel_requested:
                 goal_handle.canceled()
-                self.get_logger().info('Goal canceled')
+                self.get_logger().info("Goal canceled")
                 return Patrol.Result()
 
             curr_time = self.get_clock().now()
@@ -104,8 +102,7 @@ class Turtlebot3PatrolServer(Node):
             duration = (curr_time - last_time).nanoseconds / 1e9  # unit: s
 
             feedback_msg.left_time = total_driving_time - duration
-            self.get_logger().info(
-                'Time left until the robot stops: {0}'.format(feedback_msg.left_time))
+            self.get_logger().info(f"Time left until the robot stops: {feedback_msg.left_time}")
             goal_handle.publish_feedback(feedback_msg)
 
             # Give vel_cmd to Turtlebot3
@@ -123,6 +120,6 @@ class Turtlebot3PatrolServer(Node):
         goal_handle.succeed()
         result = Patrol.Result()
         result.success = True
-        self.get_logger().info('Returning result: {0}'.format(result.success))
+        self.get_logger().info(f"Returning result: {result.success}")
 
         return result

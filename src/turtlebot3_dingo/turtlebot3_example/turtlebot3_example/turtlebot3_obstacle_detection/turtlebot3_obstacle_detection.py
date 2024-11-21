@@ -18,15 +18,14 @@
 
 from geometry_msgs.msg import Twist
 from rclpy.node import Node
-from rclpy.qos import QoSProfile
-from rclpy.qos import qos_profile_sensor_data
+from rclpy.qos import QoSProfile, qos_profile_sensor_data
 from sensor_msgs.msg import LaserScan
 
 
 class Turtlebot3ObstacleDetection(Node):
 
-    def __init__(self):
-        super().__init__('turtlebot3_obstacle_detection')
+    def __init__(self) -> None:
+        super().__init__("turtlebot3_obstacle_detection")
 
         """************************************************************
         ** Initialise variables
@@ -42,45 +41,40 @@ class Turtlebot3ObstacleDetection(Node):
         qos = QoSProfile(depth=10)
 
         # Initialise publishers
-        self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', qos)
+        self.cmd_vel_pub = self.create_publisher(Twist, "cmd_vel", qos)
 
         # Initialise subscribers
         self.scan_sub = self.create_subscription(
-            LaserScan,
-            'scan',
-            self.scan_callback,
-            qos_profile=qos_profile_sensor_data)
+            LaserScan, "scan", self.scan_callback, qos_profile=qos_profile_sensor_data
+        )
         self.cmd_vel_raw_sub = self.create_subscription(
-            Twist,
-            'cmd_vel_raw',
-            self.cmd_vel_raw_callback,
-            qos)
+            Twist, "cmd_vel_raw", self.cmd_vel_raw_callback, qos
+        )
 
         """************************************************************
         ** Initialise timers
         ************************************************************"""
-        self.update_timer = self.create_timer(
-            0.010,  # unit: s
-            self.update_callback)
+        self.update_timer = self.create_timer(0.010, self.update_callback)  # unit: s
 
         self.get_logger().info("Turtlebot3 obstacle detection node has been initialised.")
 
     """*******************************************************************************
     ** Callback functions and relevant functions
     *******************************************************************************"""
-    def scan_callback(self, msg):
+
+    def scan_callback(self, msg) -> None:
         self.scan_ranges = msg.ranges
         self.init_scan_state = True
 
-    def cmd_vel_raw_callback(self, msg):
+    def cmd_vel_raw_callback(self, msg) -> None:
         self.linear_velocity = msg.linear.x
         self.angular_velocity = msg.angular.z
 
-    def update_callback(self):
+    def update_callback(self) -> None:
         if self.init_scan_state is True:
             self.detect_obstacle()
 
-    def detect_obstacle(self):
+    def detect_obstacle(self) -> None:
         twist = Twist()
         obstacle_distance = min(self.scan_ranges)
         safety_distance = 0.3  # unit: m

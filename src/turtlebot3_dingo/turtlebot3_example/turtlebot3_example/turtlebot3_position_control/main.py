@@ -17,12 +17,12 @@
 # Authors: Ryan Shim, Gilbert
 
 import rclpy
+from turtlebot3_example.turtlebot3_position_control.turtlebot3_position_control import (
+    Turtlebot3PositionControl,
+)
 
-from turtlebot3_example.turtlebot3_position_control.turtlebot3_position_control \
-    import Turtlebot3PositionControl
 
-
-def main(args=None):
+def main(args=None) -> None:
     rclpy.init(args=args)
     turtlebot3_position_control = Turtlebot3PositionControl()
     rclpy.spin(turtlebot3_position_control)
@@ -31,5 +31,5 @@ def main(args=None):
     rclpy.shutdown()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

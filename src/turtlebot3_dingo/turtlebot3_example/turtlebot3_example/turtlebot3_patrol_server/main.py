@@ -17,12 +17,12 @@
 # Authors: Ryan Shim, Gilbert
 
 import rclpy
+from turtlebot3_example.turtlebot3_patrol_server.turtlebot3_patrol_server import (
+    Turtlebot3PatrolServer,
+)
 
-from turtlebot3_example.turtlebot3_patrol_server.turtlebot3_patrol_server \
-    import Turtlebot3PatrolServer
 
-
-def main(args=None):
+def main(args=None) -> None:
     rclpy.init(args=args)
     turtlebot3_patrol_server = Turtlebot3PatrolServer()
     rclpy.spin(turtlebot3_patrol_server)
@@ -31,5 +31,5 @@ def main(args=None):
     rclpy.shutdown()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

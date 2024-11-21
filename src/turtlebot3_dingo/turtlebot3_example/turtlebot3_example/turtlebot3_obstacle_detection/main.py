@@ -17,12 +17,12 @@
 # Authors: Ryan Shim, Gilbert
 
 import rclpy
+from turtlebot3_example.turtlebot3_obstacle_detection.turtlebot3_obstacle_detection import (
+    Turtlebot3ObstacleDetection,
+)
 
-from turtlebot3_example.turtlebot3_obstacle_detection.turtlebot3_obstacle_detection \
-    import Turtlebot3ObstacleDetection
 
-
-def main(args=None):
+def main(args=None) -> None:
     rclpy.init(args=args)
     turtlebot3_obstacle_detection = Turtlebot3ObstacleDetection()
     rclpy.spin(turtlebot3_obstacle_detection)
@@ -31,5 +31,5 @@ def main(args=None):
     rclpy.shutdown()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

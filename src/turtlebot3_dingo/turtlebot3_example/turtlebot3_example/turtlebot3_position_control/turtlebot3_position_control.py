@@ -17,15 +17,14 @@
 # Authors: Ryan Shim, Gilbert
 
 import math
-import numpy
 import sys
 import termios
 
+import numpy
 from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
-from nav_msgs.msg import Odometry
-
 from turtlebot3_example.turtlebot3_position_control.turtlebot3_path import Turtlebot3Path
 
 terminal_msg = """
@@ -41,8 +40,8 @@ theta: goal orientation (range: -180 ~ 180, unit: deg)
 
 class Turtlebot3PositionControl(Node):
 
-    def __init__(self):
-        super().__init__('turtlebot3_position_control')
+    def __init__(self) -> None:
+        super().__init__("turtlebot3_position_control")
 
         """************************************************************
         ** Initialise variables
@@ -64,14 +63,10 @@ class Turtlebot3PositionControl(Node):
         qos = QoSProfile(depth=10)
 
         # Initialise publishers
-        self.cmd_vel_pub = self.create_publisher(Twist, 'cmd_vel', qos)
+        self.cmd_vel_pub = self.create_publisher(Twist, "cmd_vel", qos)
 
         # Initialise subscribers
-        self.odom_sub = self.create_subscription(
-            Odometry,
-            'odom',
-            self.odom_callback,
-            qos)
+        self.odom_sub = self.create_subscription(Odometry, "odom", self.odom_callback, qos)
 
         """************************************************************
         ** Initialise timers
@@ -83,18 +78,19 @@ class Turtlebot3PositionControl(Node):
     """*******************************************************************************
     ** Callback functions and relevant functions
     *******************************************************************************"""
-    def odom_callback(self, msg):
+
+    def odom_callback(self, msg) -> None:
         self.last_pose_x = msg.pose.pose.position.x
         self.last_pose_y = msg.pose.pose.position.y
         _, _, self.last_pose_theta = self.euler_from_quaternion(msg.pose.pose.orientation)
 
         self.init_odom_state = True
 
-    def update_callback(self):
+    def update_callback(self) -> None:
         if self.init_odom_state is True:
             self.generate_path()
 
-    def generate_path(self):
+    def generate_path(self) -> None:
         twist = Twist()
 
         if self.get_key_state is False:
@@ -108,8 +104,8 @@ class Turtlebot3PositionControl(Node):
             # Step 1: Turn
             if self.step == 1:
                 path_theta = math.atan2(
-                    self.goal_pose_y - self.last_pose_y,
-                    self.goal_pose_x - self.last_pose_x)
+                    self.goal_pose_y - self.last_pose_y, self.goal_pose_x - self.last_pose_x
+                )
                 angle = path_theta - self.last_pose_theta
                 angular_velocity = 0.1  # unit: rad/s
 
@@ -118,8 +114,9 @@ class Turtlebot3PositionControl(Node):
             # Step 2: Go Straight
             elif self.step == 2:
                 distance = math.sqrt(
-                    (self.goal_pose_x - self.last_pose_x)**2 +
-                    (self.goal_pose_y - self.last_pose_y)**2)
+                    (self.goal_pose_x - self.last_pose_x) ** 2
+                    + (self.goal_pose_y - self.last_pose_y) ** 2
+                )
                 linear_velocity = 0.1  # unit: m/s
 
                 twist, self.step = Turtlebot3Path.go_straight(distance, linear_velocity, self.step)
@@ -157,6 +154,7 @@ class Turtlebot3PositionControl(Node):
     """*******************************************************************************
     ** Below should be replaced when porting for ROS 2 Python tf_conversions is done.
     *******************************************************************************"""
+
     def euler_from_quaternion(self, quat):
         """
         Convert quaternion (w in last place) to euler roll, pitch, yaw.

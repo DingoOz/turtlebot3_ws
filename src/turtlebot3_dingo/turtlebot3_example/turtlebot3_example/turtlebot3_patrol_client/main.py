@@ -17,16 +17,16 @@
 # Authors: Ryan Shim, Gilbert
 
 import rclpy
+from turtlebot3_example.turtlebot3_patrol_client.turtlebot3_patrol_client import (
+    Turtlebot3PatrolClient,
+)
 
-from turtlebot3_example.turtlebot3_patrol_client.turtlebot3_patrol_client \
-    import Turtlebot3PatrolClient
 
-
-def main(args=None):
+def main(args=None) -> None:
     rclpy.init(args=args)
     turtlebot3_patrol_client = Turtlebot3PatrolClient()
     rclpy.spin(turtlebot3_patrol_client)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
