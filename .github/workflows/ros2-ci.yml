@@ -9,21 +9,21 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-22.04
-
+    
     steps:
     - uses: actions/checkout@v4
-
+    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-
+        
     - name: Install dependencies
       run: |
         sudo apt update
         sudo apt install -y python3-pip python3-flake8 python3-pytest
         pip install black isort
-
+        
     - name: Install ROS2 Humble
       run: |
         sudo apt update && sudo apt install -y curl gnupg2 lsb-release
@@ -31,21 +31,43 @@ jobs:
         echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
         sudo apt update
         sudo apt install -y ros-humble-ros-base python3-colcon-common-extensions
-
+        
+    - name: Install TurtleBot3 Dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y ros-humble-dynamixel-sdk
+        sudo apt install -y ros-humble-turtlebot3-msgs
+        sudo apt install -y ros-humble-nav2-bringup
+        sudo apt install -y ros-humble-cartographer
+        sudo apt install -y ros-humble-cartographer-ros
+        sudo apt install -y ros-humble-slam-toolbox
+        sudo apt install -y ros-humble-gazebo-*
+        
     - name: Code style check
       run: |
         # Run black for code formatting check
         black --check .
         # Run isort for import sorting check
         isort --check-only --diff .
-
+        
+    - name: Create ROS workspace
+      run: |
+        mkdir -p ~/ros2_ws/src
+        cp -r . ~/ros2_ws/src/
+        cd ~/ros2_ws
+        source /opt/ros/humble/setup.bash
+        rosdep update
+        rosdep install --from-paths src --ignore-src -r -y
+        
     - name: Build ROS2 workspace
       run: |
+        cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
         colcon build
-
+        
     - name: Run tests
       run: |
+        cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
         source install/setup.bash
         colcon test
