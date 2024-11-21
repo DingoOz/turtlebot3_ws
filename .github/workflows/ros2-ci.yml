@@ -35,9 +35,15 @@ jobs:
       run: |
         sudo apt update
         # Install system dependencies
-        sudo apt install -y libunwind-dev
-        sudo apt install -y python3-colcon-common-extensions
-        sudo apt install -y ros-humble-ros-base
+        sudo apt install -y \
+          python3-rosdep \
+          libunwind-dev \
+          python3-colcon-common-extensions \
+          ros-humble-ros-base
+        
+        # Initialize rosdep
+        sudo rosdep init || true  # Initialize only if not already initialized
+        rosdep update
         
     - name: Install TurtleBot3 Dependencies
       run: |
@@ -75,7 +81,6 @@ jobs:
         cp -r . ~/ros2_ws/src/
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
-        rosdep update
         rosdep install --from-paths src --ignore-src -r -y
         
     - name: Build ROS2 workspace
