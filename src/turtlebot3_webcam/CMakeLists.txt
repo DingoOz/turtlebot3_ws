@@ -12,19 +12,39 @@ find_package(sensor_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(rmw_fastrtps_cpp REQUIRED)
 
 # Add these lines for libudev
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(LIBUDEV REQUIRED libudev)
+
+# Find CURL
+find_package(CURL REQUIRED)
+
+# Make sure all packages are found
+if(NOT LIBUDEV_FOUND)
+    message(FATAL_ERROR "libudev not found")
+endif()
+
+if(NOT OpenCV_FOUND)
+    message(FATAL_ERROR "OpenCV not found")
+endif()
+
+if(NOT CURL_FOUND)
+    message(FATAL_ERROR "CURL not found")
+endif()
 
 # camera_publisher executable
 add_executable(camera_publisher src/camera_publisher.cpp)
 target_include_directories(camera_publisher PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
-  ${LIBUDEV_INCLUDE_DIRS}  # Add this line
+  ${LIBUDEV_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+  ${CURL_INCLUDE_DIRS}
 )
-target_compile_features(camera_publisher PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+target_compile_features(camera_publisher PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   camera_publisher
   rclcpp
@@ -32,16 +52,23 @@ ament_target_dependencies(
   cv_bridge
   image_transport
   OpenCV
+  std_msgs
 )
-# Add this line to link against libudev
-target_link_libraries(camera_publisher ${LIBUDEV_LIBRARIES})
+target_link_libraries(camera_publisher 
+  ${LIBUDEV_LIBRARIES}
+  ${OpenCV_LIBRARIES}
+  ${CURL_LIBRARIES}
+)
 
 # camera_viewer executable
 add_executable(camera_viewer src/camera_viewer.cpp)
 target_include_directories(camera_viewer PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
-target_compile_features(camera_viewer PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+  $<INSTALL_INTERFACE:include>
+  ${OpenCV_INCLUDE_DIRS}
+  ${CURL_INCLUDE_DIRS}
+)
+target_compile_features(camera_viewer PUBLIC c_std_99 cxx_std_17)
 ament_target_dependencies(
   camera_viewer
   rclcpp
@@ -49,22 +76,24 @@ ament_target_dependencies(
   cv_bridge
   image_transport
   OpenCV
+  std_msgs
+  rmw_fastrtps_cpp
+)
+target_link_libraries(camera_viewer
+  ${OpenCV_LIBRARIES}
+  ${CURL_LIBRARIES}
 )
 
 # Install targets
 install(TARGETS
   camera_publisher
   camera_viewer
-  DESTINATION lib/${PROJECT_NAME})
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # comment the line when a copyright and license is added to all source files
   set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # comment the line when this package is in a git repo and when
-  # a copyright and license is added to all source files
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
@@ -75,5 +104,5 @@ install(DIRECTORY
   DESTINATION share/${PROJECT_NAME}
 )
 
-
 ament_package()
+

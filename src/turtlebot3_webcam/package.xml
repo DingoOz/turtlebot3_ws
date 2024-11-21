@@ -2,9 +2,9 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>turtlebot3_webcam</name>
-  <version>0.0.1</version>
-  <description>TurtleBot3 webcam package with LifeCam HD-3000 support</description>
-  <maintainer email="your.email@example.com">Your Name</maintainer>
+  <version>0.0.0</version>
+  <description>TurtleBot3 Webcam package</description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
   <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
@@ -13,8 +13,16 @@
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
   <depend>image_transport</depend>
-  <depend>opencv4</depend>
-  <depend>libudev-dev</depend>
+  <depend>std_msgs</depend>
+  <depend>rmw_fastrtps_cpp</depend>
+  <depend>libcurl-dev</depend>  <!-- Added -->
+
+  <build_depend>libopencv-dev</build_depend>
+  <build_depend>libudev-dev</build_depend>
+
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>v4l2-camera</exec_depend>
+  <exec_depend>libcurl4</exec_depend>  <!-- Added -->
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
