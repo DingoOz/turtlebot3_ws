@@ -1,11 +1,9 @@
 name: ROS2 CI
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 jobs:
   build-and-test:
     runs-on: ubuntu-22.04
@@ -18,11 +16,13 @@ jobs:
       with:
         python-version: '3.10'
         
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
         sudo apt update
         sudo apt install -y python3-pip python3-flake8 python3-pytest
         pip install black isort
+        # Add these Python packages that are required for ROS2 building
+        pip install catkin_pkg empy lark setuptools==58.2.0 colcon-common-extensions
         
     - name: Install ROS2 Humble
       run: |
@@ -61,7 +61,10 @@ jobs:
           ros-humble-turtlebot3-gazebo \
           ros-humble-navigation2 \
           ros-humble-nav2-bringup \
-          ros-humble-slam-toolbox
+          ros-humble-slam-toolbox \
+          ros-humble-joy \
+          ros-humble-teleop-twist-joy \
+          ros-humble-teleop-twist-keyboard
           
         # Install Cartographer after its dependencies
         sudo apt install -y \
@@ -87,7 +90,7 @@ jobs:
       run: |
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
-        colcon build --event-handlers console_direct+
+        colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
         
     - name: Run tests
       run: |
@@ -96,3 +99,4 @@ jobs:
         source install/setup.bash
         colcon test
         colcon test-result --verbose
+        
