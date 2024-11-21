@@ -7,15 +7,15 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-22.04
-    
+
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-        
+
     - name: Install Python dependencies
       run: |
         sudo apt update
@@ -23,14 +23,14 @@ jobs:
         pip install black isort
         # Add these Python packages that are required for ROS2 building
         pip install catkin_pkg empy lark setuptools==58.2.0 colcon-common-extensions
-        
+
     - name: Install ROS2 Humble
       run: |
         sudo apt update && sudo apt install -y curl gnupg2 lsb-release
         sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
         echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
         sudo apt update
-        
+
     - name: Install system dependencies
       run: |
         sudo apt update
@@ -40,11 +40,11 @@ jobs:
           libunwind-dev \
           python3-colcon-common-extensions \
           ros-humble-ros-base
-        
+
         # Initialize rosdep
         sudo rosdep init || true  # Initialize only if not already initialized
         rosdep update
-        
+
     - name: Install TurtleBot3 Dependencies
       run: |
         # Install Cartographer dependencies first
@@ -53,7 +53,7 @@ jobs:
           libceres-dev \
           liblua5.3-dev \
           python3-sphinx
-          
+
         # Install TurtleBot3 and navigation packages
         sudo apt install -y \
           ros-humble-dynamixel-sdk \
@@ -65,19 +65,19 @@ jobs:
           ros-humble-joy \
           ros-humble-teleop-twist-joy \
           ros-humble-teleop-twist-keyboard
-          
+
         # Install Cartographer after its dependencies
         sudo apt install -y \
           ros-humble-cartographer \
           ros-humble-cartographer-ros
-        
+
     - name: Code style check
       run: |
         # Run black for code formatting check
         black --check .
         # Run isort for import sorting check
         isort --check-only --diff .
-        
+
     - name: Create ROS workspace
       run: |
         mkdir -p ~/ros2_ws/src
@@ -85,13 +85,13 @@ jobs:
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
         rosdep install --from-paths src --ignore-src -r -y
-        
+
     - name: Build ROS2 workspace
       run: |
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
         colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
-        
+
     - name: Run tests
       run: |
         cd ~/ros2_ws
@@ -99,4 +99,3 @@ jobs:
         source install/setup.bash
         colcon test
         colcon test-result --verbose
-        

@@ -7,6 +7,15 @@
   <maintainer email="dingo.australia@gmail.com">dingo</maintainer>
   <license>TODO: License declaration</license>
 
+  <!-- Build dependencies -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Runtime dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>python3-psutil</exec_depend>
+
+  <!-- Test dependencies -->
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>

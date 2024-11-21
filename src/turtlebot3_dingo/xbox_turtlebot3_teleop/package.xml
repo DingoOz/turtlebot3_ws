@@ -2,10 +2,15 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>xbox_turtlebot3_teleop</name>
-  <version>1.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="dingo.australia@gmail.com">dingo</maintainer>
-  <license>TODO: License declaration</license>
+  <version>0.0.1</version>
+  <description>Xbox controller teleop node for TurtleBot3</description>
+  <maintainer email="your_email@example.com">dingo</maintainer>
+  <license>Apache License 2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>joy</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

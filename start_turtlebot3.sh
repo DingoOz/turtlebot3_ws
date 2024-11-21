@@ -7,4 +7,3 @@ exec ros2 launch turtlebot3_bringup dingo.robot.launch.py  >> /home/ubuntu/turtl
 
 StandardOutput=journal
 StandardErr=journal
-

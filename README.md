@@ -10,7 +10,7 @@ sudo apt-get install libv4l-dev wireless-tools ros-humble-slam-toolbox ros-humbl
 ```
 
 0. sudo apt install libv4l-dev ros-humble-cv-bridge
-1. Clone this repository   
+1. Clone this repository
 2. Source ROS setup file: `source /opt/ros/humble/setup.bash`
 3. Build the workspace: `colcon build --symlink-install`
 
@@ -63,9 +63,9 @@ Unplug and plug in the Oakd-lite.
 
 
 ## Setting up the systemd service
-There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to 
-create a systemd service from this file that will automatically run on startup you can follow these 
-steps. This will result in the robot being ready as soon as it is booted and without and need to ssh 
+There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to
+create a systemd service from this file that will automatically run on startup you can follow these
+steps. This will result in the robot being ready as soon as it is booted and without and need to ssh
 into it or similar.
 
 1 - Edit the start_turtlebot3.sh file and change the username and directories if needed
@@ -126,4 +126,3 @@ To update your TurtleBot3 fork with the latest changes from the original reposit
    `git merge upstream/ros2`
 4. Push the updates to your fork:
    `git push origin ros2`
-

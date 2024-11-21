@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      
+
   # Maintain dependencies for Python
   - package-ecosystem: "pip"
     directory: "/"
@@ -16,4 +16,3 @@ updates:
       - dependency-name: "rclpy"
       - dependency-name: "geometry_msgs"
       - dependency-name: "sensor_msgs"
-      

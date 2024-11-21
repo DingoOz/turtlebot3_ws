@@ -5,7 +5,7 @@
   <version>2.1.5</version>
   <description>
     ROS 2 launch scripts for navigation2
-  </description> 
+  </description>
   <maintainer email="willson@robotis.com">Will Son</maintainer>
   <license>Apache 2.0</license>
   <url type="website">http://turtlebot3.robotis.com</url>

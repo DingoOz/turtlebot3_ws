@@ -18,7 +18,7 @@ void VideoWidget::updateFrame(const cv::Mat& frame) {
     qDebug() << "Received empty frame";
     return;
   }
-  
+
   QImage qimg = mat_to_qimage(frame);
   if (qimg.isNull()) {
     qDebug() << "Failed to convert cv::Mat to QImage";
@@ -46,15 +46,15 @@ TwistWidget::TwistWidget(QWidget* parent) : QWidget(parent) {
   layout = new QVBoxLayout(this);
   linear_label = new QLabel("Linear: x=0.00, y=0.00, z=0.00", this);
   angular_label = new QLabel("Angular: x=0.00, y=0.00, z=0.00", this);
-  
+
   linear_progress = new QProgressBar(this);
   linear_progress->setRange(-100, 100);
   linear_progress->setFormat("Linear X: %v");
-  
+
   angular_progress = new QProgressBar(this);
   angular_progress->setRange(-100, 100);
   angular_progress->setFormat("Angular Z: %v");
-  
+
   layout->addWidget(linear_label);
   layout->addWidget(angular_label);
   layout->addWidget(linear_progress);
@@ -71,10 +71,10 @@ void TwistWidget::updateTwist(const geometry_msgs::msg::Twist::SharedPtr msg) {
     .arg(msg->angular.x, 0, 'f', 2)
     .arg(msg->angular.y, 0, 'f', 2)
     .arg(msg->angular.z, 0, 'f', 2));
-  
+
   int linear_progress_value = static_cast<int>(msg->linear.x * 100);
   linear_progress->setValue(linear_progress_value);
-  
+
   int angular_progress_value = static_cast<int>(msg->angular.z / 1.5 * 100);
   angular_progress->setValue(angular_progress_value);
 }
@@ -137,7 +137,7 @@ void DashboardWindow::updateWidgets() {
         RCLCPP_WARN(dashboard_node_->get_logger(), "Received empty frame");
       } else {
         RCLCPP_INFO(dashboard_node_->get_logger(), "Processing frame: %dx%d", frame.cols, frame.rows);
-        
+
         QMetaObject::invokeMethod(video_widget, [this, frame]() {
           try {
             video_widget->updateFrame(frame.clone());  // Use clone() to ensure deep copy

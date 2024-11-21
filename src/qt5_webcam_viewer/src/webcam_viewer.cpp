@@ -102,7 +102,7 @@ private:
             cv_bridge::CvImageConstPtr cv_ptr = cv_bridge::toCvShare(msg, sensor_msgs::image_encodings::BGR8);
             cv::Mat adjusted_image;
             cv::convertScaleAbs(cv_ptr->image, adjusted_image, 1.0, brightness_);
-            QImage qimg(adjusted_image.data, adjusted_image.cols, adjusted_image.rows, 
+            QImage qimg(adjusted_image.data, adjusted_image.cols, adjusted_image.rows,
                         adjusted_image.step, QImage::Format_RGB888);
             latest_image_ = qimg.rgbSwapped();
         } catch (cv_bridge::Exception& e) {
@@ -151,9 +151,9 @@ int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
     QApplication app(argc, argv);
-    
+
     auto node = std::make_shared<WebcamViewer>();
-    
+
     while (rclcpp::ok()) {
         app.processEvents();
         rclcpp::spin_some(node);

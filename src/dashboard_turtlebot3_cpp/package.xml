@@ -18,7 +18,7 @@
   <depend>opencv</depend>
   <depend>std_msgs</depend>
   <depend>qt5-qmake</depend>
-  
+
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

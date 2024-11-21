@@ -36,7 +36,7 @@ ament_target_dependencies(
 )
 
 # Link Qt5 and OpenCV
-target_link_libraries(webcam_viewer 
+target_link_libraries(webcam_viewer
   ${Qt5Widgets_LIBRARIES}
   ${OpenCV_LIBS}
 )

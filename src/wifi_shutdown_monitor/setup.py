@@ -1,3 +1,6 @@
+import os
+from glob import glob
+
 from setuptools import setup
 
 package_name = "wifi_shutdown_monitor"
@@ -9,7 +12,10 @@ setup(
     data_files=[
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml"]),
-        ("share/" + package_name + "/launch", ["launch/wifi_monitor.launch.py"]),
+        (
+            os.path.join("share", package_name, "launch"),
+            glob(os.path.join("launch", "*.launch.py")),
+        ),
     ],
     install_requires=["setuptools"],
     zip_safe=True,
@@ -23,4 +29,5 @@ setup(
             "wifi_monitor = wifi_shutdown_monitor.wifi_monitor_node:main",
         ],
     },
+    python_requires=">=3.6",  # ROS 2 Humble requires Python 3.6 or newer
 )
