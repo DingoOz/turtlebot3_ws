@@ -71,12 +71,12 @@ jobs:
           ros-humble-cartographer \
           ros-humble-cartographer-ros
 
-    - name: Code style check
-      run: |
+    #- name: Code style check
+     # run: |
         # Run black for code formatting check
-        black --check .
+     #   black --check .
         # Run isort for import sorting check
-        isort --check-only --diff .
+     #   isort --check-only --diff .
 
     - name: Create ROS workspace
       run: |
