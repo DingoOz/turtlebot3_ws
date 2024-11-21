@@ -2,6 +2,9 @@
 
 This workspace contains a custom setup for TurtleBot3 with SLAMTEC Lidar.
 
+## Status
+[![ROS2 CI](https://github.com/DingoOz/turtlebot3_ws/actions/workflows/ros2-ci.yml/badge.svg)](https://github.com/DingoOz/turtlebot3_ws/actions/workflows/ros2-ci.yml)
+
 ## Setup
 
 ```
