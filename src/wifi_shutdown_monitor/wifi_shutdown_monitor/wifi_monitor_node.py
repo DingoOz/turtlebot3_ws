@@ -61,10 +61,7 @@ class WifiMonitorNode(Node):
         """
         try:
             result = subprocess.run(
-                ["iwgetid", "-r"],
-                capture_output=True,
-                text=True,
-                check=False
+                ["iwgetid", "-r"], capture_output=True, text=True, check=False
             )
             return result.stdout.strip() == self.ssid
         except subprocess.CalledProcessError:
@@ -97,4 +94,3 @@ def main(args=None) -> None:
 
 if __name__ == "__main__":
     main()
-    
