@@ -1,0 +1,8 @@
+build/
+install/
+log/
+*.pyc
+*.swp
+.vscode/
+*.png
+launch.log

@@ -1,0 +1,40 @@
+# .github/workflows/ros2-tests.yaml
+name: ROS2 Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    container:
+      image: ros:humble
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install dependencies
+      run: |
+        apt-get update
+        apt-get install -y python3-pip
+        pip3 install pytest pytest-cov
+        apt-get install -y ros-humble-joy ros-humble-geometry-msgs
+    
+    - name: Create workspace and build
+      run: |
+        mkdir -p /ws/src
+        cp -r $GITHUB_WORKSPACE /ws/src/xbox_turtlebot3_teleop
+        cd /ws
+        . /opt/ros/humble/setup.sh
+        colcon build
+        
+    - name: Run tests
+      run: |
+        cd /ws
+        . /opt/ros/humble/setup.sh
+        . install/setup.sh
+        colcon test --packages-select xbox_turtlebot3_teleop --event-handlers console_direct+
+        colcon test-result --verbose
