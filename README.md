@@ -109,11 +109,12 @@ sudo systemctl enable turtlebot3.service
 sudo systemctl start turtlebot3.service
 ```
 
+7 - Nav2 bringup
 
-
-=======
+```
 sudo apt install ros-humble-nav2-bringup
->>>>>>> 11fc59686f1ca332a4f79d2f55ec442ae1d5b980
+```
+
 ## Usage
 [Add usage instructions here]
 
