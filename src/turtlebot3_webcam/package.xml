@@ -24,9 +24,6 @@
   <exec_depend>v4l2-camera</exec_depend>
   <exec_depend>libcurl4</exec_depend>  <!-- Added -->
 
-  <test_depend>ament_lint_auto</test_depend>
-  <test_depend>ament_lint_common</test_depend>
-
   <export>
     <build_type>ament_cmake</build_type>
   </export>
