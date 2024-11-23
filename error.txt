@@ -1,5 +1,0 @@
-Starting >>> turtlebot3_webcam
-
-Summary: 0 packages finished [0.90s]
-  1 package failed: turtlebot3_webcam
-  1 package had stderr output: turtlebot3_webcam
