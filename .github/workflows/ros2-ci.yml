@@ -92,7 +92,7 @@ jobs:
         source /opt/ros/humble/setup.bash
         colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-       - name: Run tests
+    - name: Run tests
       run: |
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
@@ -100,3 +100,4 @@ jobs:
         pytest src/xbox_turtlebot3_teleop/test --verbose -v --capture=no
         colcon test --packages-select xbox_turtlebot3_teleop --event-handlers console_direct+
         colcon test-result --verbose
+        
