@@ -21,7 +21,13 @@ setup(
         # Config files if you have any
         ('share/' + package_name + '/config', glob('config/*.yaml')),
     ],
-    install_requires=['setuptools'],
+    install_requires=[
+        "setuptools",
+        "numpy",  # Add numpy as a dependency
+        "geometry_msgs",
+        "sensor_msgs",
+        "rclpy",
+    ],
     zip_safe=True,
     maintainer='dingo',
     maintainer_email='your_email@example.com',

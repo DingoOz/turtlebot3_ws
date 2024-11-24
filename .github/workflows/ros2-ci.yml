@@ -19,7 +19,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         sudo apt update
-        sudo apt install -y python3-pip python3-flake8 python3-pytest
+        sudo apt install -y python3-pip python3-flake8 python3-pytest numpy pytest-cov
         pip install black isort
         # Add these Python packages that are required for ROS2 building
         pip install catkin_pkg empy lark setuptools==58.2.0 colcon-common-extensions
