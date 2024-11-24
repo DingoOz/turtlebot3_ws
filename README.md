@@ -66,8 +66,6 @@ Unplug and plug in the Oakd-lite.
 
 
 
-
-
 ## Setting up the systemd service
 There is a bash script in the root directory called "start_turtblebot3.sh". If you would like to
 create a systemd service from this file that will automatically run on startup you can follow these
