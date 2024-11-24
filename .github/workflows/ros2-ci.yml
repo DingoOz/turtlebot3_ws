@@ -20,9 +20,11 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y python3-pip python3-flake8 python3-pytest python3-numpy
-        pip install black isort
-        # Add these Python packages that are required for ROS2 building
-        pip install catkin_pkg empy lark setuptools==58.2.0 colcon-common-extensions
+        python3 -m pip install --upgrade pip
+        pip3 install numpy
+        pip3 install black isort
+        pip3 install catkin_pkg empy lark setuptools==58.2.0 colcon-common-extensions
+        pip3 install pytest pytest-cov pytest-mock pytest-asyncio
 
     - name: Install ROS2 Humble
       run: |
@@ -30,32 +32,30 @@ jobs:
         sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
         echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
         sudo apt update
+        sudo apt install -y ros-humble-ros-base python3-rosdep python3-numpy
 
     - name: Install system dependencies
       run: |
         sudo apt update
-        # Install system dependencies
         sudo apt install -y \
           python3-rosdep \
           libunwind-dev \
           python3-colcon-common-extensions \
-          ros-humble-ros-base
+          ros-humble-ros-base \
+          python3-numpy
 
-        # Initialize rosdep
-        sudo rosdep init || true  # Initialize only if not already initialized
+        sudo rosdep init || true
         rosdep update
 
     - name: Install TurtleBot3 Dependencies
       run: |
-        # Install Cartographer dependencies first
         sudo apt install -y \
           libgoogle-glog-dev \
           libceres-dev \
           liblua5.3-dev \
-          python3-sphinx
-
-        # Install TurtleBot3 and navigation packages
-        sudo apt install -y \
+          python3-sphinx \
+          python3-numpy \
+          ros-humble-geometry-msgs \
           ros-humble-dynamixel-sdk \
           ros-humble-turtlebot3-msgs \
           ros-humble-turtlebot3-gazebo \
@@ -66,7 +66,6 @@ jobs:
           ros-humble-teleop-twist-joy \
           ros-humble-teleop-twist-keyboard
 
-        # Install Cartographer after its dependencies
         sudo apt install -y \
           ros-humble-cartographer \
           ros-humble-cartographer-ros
@@ -83,6 +82,8 @@ jobs:
       run: |
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
+        # Ensure numpy is available in the Python environment
+        python3 -m pip install numpy
         colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 
     - name: Run tests
@@ -90,6 +91,9 @@ jobs:
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
         source install/setup.bash
+        # Ensure numpy is available in the test environment
+        python3 -m pip install numpy
+        # Force reinstall numpy to ensure it's in the correct place
+        python3 -m pip install --force-reinstall numpy
         colcon test --event-handlers console_direct+
         colcon test-result --verbose
-        

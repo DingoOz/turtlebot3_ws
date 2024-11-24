@@ -11,6 +11,7 @@
   <depend>geometry_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>joy</depend>
+  <depend>python3-numpy</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
@@ -20,6 +21,7 @@
   <test_depend>python3-pytest-mock</test_depend>
   <test_depend>python3-pytest-asyncio</test_depend>
   <test_depend>python3-numpy</test_depend> 
+  <test_depend>geometry_msgs</test_depend>
 
 
   <export>

@@ -9,24 +9,20 @@ setup(
     version='0.0.1',
     packages=find_packages(exclude=['test']),
     data_files=[
-        # Package index
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        # Package XML
         ('share/' + package_name, ['package.xml']),
-        # Launch files if you have any
         ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
-        # Test files
         ('share/' + package_name + '/test', glob('test/**/*.py')),
-        # Config files if you have any
         ('share/' + package_name + '/config', glob('config/*.yaml')),
     ],
     install_requires=[
-        "setuptools",
-        "numpy",  # Add numpy as a dependency
-        "geometry_msgs",
-        "sensor_msgs",
-        "rclpy",
+        'setuptools',
+        'numpy>=1.20.0',  # Specify minimum version
+        'rclpy',
+    ],
+    setup_requires=[
+        'numpy>=1.20.0',  # Add setup_requires for numpy
     ],
     zip_safe=True,
     maintainer='dingo',
@@ -38,6 +34,7 @@ setup(
         'pytest-cov',
         'pytest-mock',
         'pytest-asyncio',
+        'numpy>=1.20.0',  # Add numpy to test requirements
     ],
     entry_points={
         'console_scripts': [
@@ -45,9 +42,4 @@ setup(
         ],
     },
     python_requires='>=3.8',
-    classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: Apache Software License',
-        'Operating System :: OS Independent',
-    ],
 )
