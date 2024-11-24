@@ -71,13 +71,6 @@ jobs:
           ros-humble-cartographer \
           ros-humble-cartographer-ros
 
-    #- name: Code style check
-     # run: |
-        # Run black for code formatting check
-     #   black --check .
-        # Run isort for import sorting check
-     #   isort --check-only --diff .
-
     - name: Create ROS workspace
       run: |
         mkdir -p ~/ros2_ws/src
@@ -97,7 +90,6 @@ jobs:
         cd ~/ros2_ws
         source /opt/ros/humble/setup.bash
         source install/setup.bash
-#        pytest src/xbox_turtlebot3_teleop/test --verbose -v --capture=no
-        colcon test --packages-select xbox_turtlebot3_teleop --event-handlers console_direct+
+        colcon test --event-handlers console_direct+
         colcon test-result --verbose
         
