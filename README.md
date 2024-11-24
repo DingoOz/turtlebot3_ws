@@ -118,6 +118,14 @@ sudo systemctl start turtlebot3.service
 sudo apt install ros-humble-nav2-bringup
 ```
 
+# Testing
+
+```
+colcon test --event-handlers console_direct+
+```
+
+
+
 ## Usage
 [Add usage instructions here]
 
