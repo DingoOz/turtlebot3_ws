@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a ROS2 Humble workspace for a custom TurtleBot3 setup with SLAMTEC RPLidar A1, OAK-D Lite camera, and additional custom packages. The workspace contains both C++ and Python ROS2 packages for robotics applications.
 
-## Essential Commands
+## Commands
 
-### Build and Setup
+### Build and Development
 ```bash
 # Source ROS2 environment
 source /opt/ros/humble/setup.bash
@@ -19,11 +19,18 @@ colcon build --symlink-install
 # Build with release optimizations
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
+# Build specific package 
+colcon build --packages-select <package_name> --symlink-install
+
 # Source workspace after building
 source install/setup.bash
 
 # Install dependencies
 rosdep install --from-paths src --ignore-src -r -y
+
+# Clean build
+rm -rf build/ install/ log/
+colcon build --symlink-install
 ```
 
 ### Testing
@@ -31,11 +38,42 @@ rosdep install --from-paths src --ignore-src -r -y
 # Run all tests
 colcon test --event-handlers console_direct+
 
+# Run tests for specific package
+colcon test --packages-select <package_name> --event-handlers console_direct+
+
+# Run Python tests with coverage
+python -m pytest test/ --cov --cov-report=term-missing
+
 # View test results
 colcon test-result --verbose
+```
 
-# Run specific package tests
-colcon test --packages-select <package_name> --event-handlers console_direct+
+### Linting and Code Quality
+```bash
+# C++ packages use ament linting
+colcon test --packages-select <cpp_package> --event-handlers console_direct+
+
+# Python packages - run in package directory
+python -m pytest --cov --cov-report=term-missing
+ruff check .  # if available
+```
+
+### Robot Operations
+```bash
+# Launch robot (main configuration)
+ros2 launch turtlebot3_dingo dingo.robot.launch.py
+
+# Launch standard TurtleBot3
+ros2 launch turtlebot3_bringup robot.launch.py
+
+# Xbox controller teleoperation
+ros2 launch xbox_turtlebot3_teleop xbox_teleop.launch.py
+
+# SLAM with SLAM Toolbox
+ros2 launch slam_toolbox_tb3 slam_toolbox_launch.py
+
+# Navigation
+ros2 launch turtlebot3_navigation2 navigation2.launch.py
 ```
 
 ### Development Dependencies
@@ -51,7 +89,7 @@ pip3 install numpy depthai
 
 Note: Remove system setuptools if present (`pip3 uninstall setuptools`) as it conflicts with ROS2 build system.
 
-## Architecture Overview
+## Architecture
 
 ### Core Robot Setup
 - **Main Launch**: `turtlebot3_bringup/launch/dingo.robot.launch.py` - Primary robot bringup that launches all essential components
@@ -86,6 +124,11 @@ Note: Remove system setuptools if present (`pip3 uninstall setuptools`) as it co
 - Right trigger deadman switch for safety
 - Mathematical velocity calculation with configurable max speeds
 - Direction reversal logic for intuitive control
+- Python package with numpy dependency
+
+**sllidar_ros2/**: SLAMTEC RPLidar driver supporting A1/A2/A3/C1/S1/S2/S3/T1 models
+
+**opensw_ros/**: Open driver for SlamTec M2M1 Mapper devices
 
 ### Environment Variables
 - `TURTLEBOT3_MODEL=burger` (default)
@@ -112,10 +155,20 @@ The workspace includes `start_turtlebot3.sh` for automatic robot startup. This s
 - Logs output to `/home/ubuntu/turtlebot3_ws/launch.log`
 - Can be deployed as systemd service for boot-time startup
 
-## Development Notes
+## Important Files
+- `dingo.robot.launch.py` - Main robot bringup (use this instead of standard robot.launch.py)
+- `start_turtlebot3.sh` - Systemd service script for automatic startup
+- `dingo_turtlebot3_commands.sh` - Interactive command menu for operations
+- CI configuration in `.github/workflows/ros2-ci.yml`
 
+## Development Notes
+- Always source the workspace before running commands: `source install/setup.bash`
+- Use `--symlink-install` for faster development iteration
 - All custom launch files set ROS_DOMAIN_ID=30 for consistent networking
 - The main robot launch includes WiFi monitoring as a safety feature
 - Xbox teleop requires joy node to be running separately
 - Camera and LiDAR can be launched independently for testing
 - SLAM toolbox is configured specifically for the burger model with RPLidar A1
+- Python packages require numpy dependency for testing
+- LIDAR driver supports multiple SLAMTEC models - check hardware compatibility
+- Dashboard application requires Qt5 development libraries
