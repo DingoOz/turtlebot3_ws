@@ -74,6 +74,9 @@ ros2 launch slam_toolbox_tb3 slam_toolbox_launch.py
 
 # Navigation
 ros2 launch turtlebot3_navigation2 navigation2.launch.py
+
+# Interactive command menu (run from turtlebot3_dingo directory)
+source dingo_turtlebot3_commands.sh
 ```
 
 ### Development Dependencies
@@ -93,6 +96,8 @@ Note: Remove system setuptools if present (`pip3 uninstall setuptools`) as it co
 
 ### Core Robot Setup
 - **Main Launch**: `turtlebot3_bringup/launch/dingo.robot.launch.py` - Primary robot bringup that launches all essential components
+  - Automatically launches robot base, LiDAR, state publisher, and WiFi monitor
+  - Sets ROS_DOMAIN_ID=30 and TURTLEBOT3_MODEL=burger by default
 - **LiDAR**: SLAMTEC RPLidar A1 (configured via LDS_MODEL=A1 environment variable)
 - **Camera**: OAK-D Lite depth camera via depthai_ros_driver
 - **Robot Base**: TurtleBot3 Burger model with OpenCR board on /dev/ttyACM0
@@ -129,6 +134,15 @@ Note: Remove system setuptools if present (`pip3 uninstall setuptools`) as it co
 **sllidar_ros2/**: SLAMTEC RPLidar driver supporting A1/A2/A3/C1/S1/S2/S3/T1 models
 
 **opensw_ros/**: Open driver for SlamTec M2M1 Mapper devices
+- Includes IMU and laser drivers (imu_driver.cpp, laser_driver.cpp)
+- Custom message definitions for IMU data
+
+**qt5_webcam_viewer/**: Qt5-based webcam viewer application  
+- Dependencies: rclcpp, Qt5, OpenCV, cv_bridge
+
+**turtlebot3_webcam/**: Webcam integration package
+- camera_publisher.cpp and camera_viewer.cpp for video streaming
+- Dependencies: rclcpp, OpenCV, cv_bridge, libv4l-dev
 
 ### Environment Variables
 - `TURTLEBOT3_MODEL=burger` (default)
