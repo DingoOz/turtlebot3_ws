@@ -6,9 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a ROS2 Jazzy workspace for a custom TurtleBot3 setup with SLAMTEC RPLidar A1, OAK-D Lite camera, and additional custom packages. The workspace contains both C++ and Python ROS2 packages for robotics applications.
 
-## Essential Commands
+## Commands
 
-### Build and Setup
+### Build and Development
 ```bash
 # Source ROS2 environment
 source /opt/ros/jazzy/setup.bash
@@ -19,11 +19,18 @@ colcon build --symlink-install
 # Build with release optimizations
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
+# Build specific package 
+colcon build --packages-select <package_name> --symlink-install
+
 # Source workspace after building
 source install/setup.bash
 
 # Install dependencies
 rosdep install --from-paths src --ignore-src -r -y
+
+# Clean build
+rm -rf build/ install/ log/
+colcon build --symlink-install
 ```
 
 ### Testing
@@ -31,8 +38,16 @@ rosdep install --from-paths src --ignore-src -r -y
 # Run all tests
 colcon test --event-handlers console_direct+
 
+# Run tests for specific package
+colcon test --packages-select <package_name> --event-handlers console_direct+
+
+# Run Python tests with coverage
+python -m pytest test/ --cov --cov-report=term-missing
+
 # View test results
 colcon test-result --verbose
+```
+
 
 # Run specific package tests
 colcon test --packages-select <package_name> --event-handlers console_direct+
@@ -41,6 +56,7 @@ colcon test --packages-select <package_name> --event-handlers console_direct+
 python3 -m flake8 src/
 python3 -m black src/
 python3 -m isort src/
+
 ```
 
 ### Development Dependencies
@@ -65,10 +81,12 @@ pip3 install numpy depthai
 
 **Important:** Remove system setuptools if present (`pip3 uninstall setuptools`) as it conflicts with ROS2 build system.
 
-## Architecture Overview
+## Architecture
 
 ### Core Robot Setup
 - **Main Launch**: `turtlebot3_bringup/launch/dingo.robot.launch.py` - Primary robot bringup that launches all essential components
+  - Automatically launches robot base, LiDAR, state publisher, and WiFi monitor
+  - Sets ROS_DOMAIN_ID=30 and TURTLEBOT3_MODEL=burger by default
 - **LiDAR**: SLAMTEC RPLidar A1 (configured via LDS_MODEL=A1 environment variable)
 - **Camera**: OAK-D Lite depth camera via depthai_ros_driver
 - **Robot Base**: TurtleBot3 Burger model with OpenCR board on /dev/ttyACM0
@@ -100,6 +118,20 @@ pip3 install numpy depthai
 - Right trigger deadman switch for safety
 - Mathematical velocity calculation with configurable max speeds
 - Direction reversal logic for intuitive control
+- Python package with numpy dependency
+
+**sllidar_ros2/**: SLAMTEC RPLidar driver supporting A1/A2/A3/C1/S1/S2/S3/T1 models
+
+**opensw_ros/**: Open driver for SlamTec M2M1 Mapper devices
+- Includes IMU and laser drivers (imu_driver.cpp, laser_driver.cpp)
+- Custom message definitions for IMU data
+
+**qt5_webcam_viewer/**: Qt5-based webcam viewer application  
+- Dependencies: rclcpp, Qt5, OpenCV, cv_bridge
+
+**turtlebot3_webcam/**: Webcam integration package
+- camera_publisher.cpp and camera_viewer.cpp for video streaming
+- Dependencies: rclcpp, OpenCV, cv_bridge, libv4l-dev
 
 **turtlebot3_webcam/**: USB camera integration
 - V4L2 camera support with image streaming
@@ -140,6 +172,7 @@ The workspace includes `start_turtlebot3.sh` for automatic robot startup. This s
 - Logs output to `/home/ubuntu/turtlebot3_ws/launch.log`
 - Can be deployed as systemd service for boot-time startup
 
+
 ## Common Launch Commands
 
 ### Individual Component Testing
@@ -176,11 +209,16 @@ ros2 launch oakd_lite_turtlebot3 turtlebot3_oakd_nav2.launch.py
 ros2 run turtlebot3_teleop teleop_keyboard
 ```
 
-## Development Notes
 
+
+
+## Development Notes
+- Always source the workspace before running commands: `source install/setup.bash`
+- Use `--symlink-install` for faster development iteration
 - All custom launch files set ROS_DOMAIN_ID=30 for consistent networking
 - The main robot launch includes WiFi monitoring as a safety feature
 - Xbox teleop requires joy node to be running separately
 - Camera and LiDAR can be launched independently for testing
 - SLAM toolbox is configured specifically for the burger model with RPLidar A1
-- Use `dingo_turtlebot3_commands.sh` script for interactive command selection during development
+
+
