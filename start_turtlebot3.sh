@@ -1,5 +1,5 @@
 #! /bin/bash
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 source /home/ubuntu/turtlebot3_ws/install/setup.bash
 
 #Launch the Turtlebot3 bringup

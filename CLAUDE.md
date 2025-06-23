@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a ROS2 Humble workspace for a custom TurtleBot3 setup with SLAMTEC RPLidar A1, OAK-D Lite camera, and additional custom packages. The workspace contains both C++ and Python ROS2 packages for robotics applications.
+This is a ROS2 Jazzy workspace for a custom TurtleBot3 setup with SLAMTEC RPLidar A1, OAK-D Lite camera, and additional custom packages. The workspace contains both C++ and Python ROS2 packages for robotics applications.
 
 ## Commands
 
 ### Build and Development
 ```bash
 # Source ROS2 environment
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 
 # Build entire workspace
 colcon build --symlink-install
@@ -48,41 +48,30 @@ python -m pytest test/ --cov --cov-report=term-missing
 colcon test-result --verbose
 ```
 
-### Linting and Code Quality
-```bash
-# C++ packages use ament linting
-colcon test --packages-select <cpp_package> --event-handlers console_direct+
 
-# Python packages - run in package directory
-python -m pytest --cov --cov-report=term-missing
-ruff check .  # if available
-```
+# Run specific package tests
+colcon test --packages-select <package_name> --event-handlers console_direct+
 
-### Robot Operations
-```bash
-# Launch robot (main configuration)
-ros2 launch turtlebot3_dingo dingo.robot.launch.py
+# Run Python linting/formatting (if available)
+python3 -m flake8 src/
+python3 -m black src/
+python3 -m isort src/
 
-# Launch standard TurtleBot3
-ros2 launch turtlebot3_bringup robot.launch.py
-
-# Xbox controller teleoperation
-ros2 launch xbox_turtlebot3_teleop xbox_teleop.launch.py
-
-# SLAM with SLAM Toolbox
-ros2 launch slam_toolbox_tb3 slam_toolbox_launch.py
-
-# Navigation
-ros2 launch turtlebot3_navigation2 navigation2.launch.py
-
-# Interactive command menu (run from turtlebot3_dingo directory)
-source dingo_turtlebot3_commands.sh
 ```
 
 ### Development Dependencies
 Required system packages that must be installed before building:
 ```bash
-sudo apt-get install libv4l-dev wireless-tools ros-humble-slam-toolbox ros-humble-nav2-bringup ros-humble-depthai-ros ros-humble-cv-bridge
+sudo apt-get install libv4l-dev wireless-tools ros-jazzy-slam-toolbox ros-jazzy-nav2-bringup ros-jazzy-depthai-ros ros-jazzy-cv-bridge
+
+# Additional Qt5 dependencies for webcam viewer
+sudo apt-get install libqt5-core libqt5-gui libqt5-widgets
+
+# OCR service dependencies
+sudo apt-get install tesseract-ocr tesseract-ocr-eng libtesseract-dev libleptonica-dev libopencv-dev
+
+# Additional ROS2 packages for full functionality
+sudo apt-get install ros-jazzy-joy ros-jazzy-teleop-twist-joy ros-jazzy-teleop-twist-keyboard
 ```
 
 Python dependencies:
@@ -90,7 +79,7 @@ Python dependencies:
 pip3 install numpy depthai
 ```
 
-Note: Remove system setuptools if present (`pip3 uninstall setuptools`) as it conflicts with ROS2 build system.
+**Important:** Remove system setuptools if present (`pip3 uninstall setuptools`) as it conflicts with ROS2 build system.
 
 ## Architecture
 
@@ -144,6 +133,20 @@ Note: Remove system setuptools if present (`pip3 uninstall setuptools`) as it co
 - camera_publisher.cpp and camera_viewer.cpp for video streaming
 - Dependencies: rclcpp, OpenCV, cv_bridge, libv4l-dev
 
+**turtlebot3_webcam/**: USB camera integration
+- V4L2 camera support with image streaming
+- Dependencies: cv_bridge, image_transport, libv4l-dev
+
+**qt5_webcam_viewer/**: Qt5-based camera viewer
+- Real-time camera feed display using Qt5 widgets
+- Dependencies: Qt5 core, gui, widgets libraries
+
+**ocr_camera_service/**: OCR-based camera capture service
+- Service-triggered 5-second video capture with OCR text extraction
+- C++ implementation using Tesseract OCR and OpenCV
+- Automatic video/image saving with timestamp organization
+- Dependencies: libtesseract-dev, libleptonica-dev, libopencv-dev
+
 ### Environment Variables
 - `TURTLEBOT3_MODEL=burger` (default)
 - `LDS_MODEL=A1` (for RPLidar A1)
@@ -169,11 +172,45 @@ The workspace includes `start_turtlebot3.sh` for automatic robot startup. This s
 - Logs output to `/home/ubuntu/turtlebot3_ws/launch.log`
 - Can be deployed as systemd service for boot-time startup
 
-## Important Files
-- `dingo.robot.launch.py` - Main robot bringup (use this instead of standard robot.launch.py)
-- `start_turtlebot3.sh` - Systemd service script for automatic startup
-- `dingo_turtlebot3_commands.sh` - Interactive command menu for operations
-- CI configuration in `.github/workflows/ros2-ci.yml`
+
+## Common Launch Commands
+
+### Individual Component Testing
+```bash
+# Test camera only
+ros2 launch turtlebot3_webcam camera_viewer.launch.py
+
+# Test OAK-D Lite camera
+ros2 launch oakd_lite_turtlebot3 oakd_lite.launch.py
+
+# Test Xbox controller (requires joy node)
+ros2 run joy joy_node
+ros2 launch xbox_turtlebot3_teleop xbox_teleop.launch.py
+
+# Test SLAM with visualization
+ros2 launch slam_toolbox_tb3 slam_and_rviz_launch.py
+
+# Test OCR camera service
+ros2 launch ocr_camera_service ocr_camera.launch.py camera_topic:=/webcam/image_raw
+
+# Launch navigation
+ros2 launch turtlebot3_navigation2 dingo.navigation2.launch.py map:=$HOME/map.yaml
+```
+
+### Full Robot Operations
+```bash
+# Main robot bringup (all sensors and base)
+ros2 launch turtlebot3_bringup dingo.robot.launch.py
+
+# Robot with navigation
+ros2 launch oakd_lite_turtlebot3 turtlebot3_oakd_nav2.launch.py
+
+# Teleop control
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+
+
+
 
 ## Development Notes
 - Always source the workspace before running commands: `source install/setup.bash`
@@ -183,6 +220,5 @@ The workspace includes `start_turtlebot3.sh` for automatic robot startup. This s
 - Xbox teleop requires joy node to be running separately
 - Camera and LiDAR can be launched independently for testing
 - SLAM toolbox is configured specifically for the burger model with RPLidar A1
-- Python packages require numpy dependency for testing
-- LIDAR driver supports multiple SLAMTEC models - check hardware compatibility
-- Dashboard application requires Qt5 development libraries
+
+
