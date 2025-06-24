@@ -29,5 +29,5 @@ setup(
             "wifi_monitor = wifi_shutdown_monitor.wifi_monitor_node:main",
         ],
     },
-    python_requires=">=3.6",  # ROS 2 Humble requires Python 3.6 or newer
+    python_requires=">=3.8",  # ROS 2 Jazzy requires Python 3.8 or newer
 )

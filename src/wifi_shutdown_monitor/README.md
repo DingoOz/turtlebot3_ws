@@ -17,7 +17,7 @@ This package provides a safety mechanism for autonomous robots operating in WiFi
 
 - TurtleBot3 with Raspberry Pi 4
 - Ubuntu 22.04
-- ROS2 Humble
+- ROS2 Jazzy
 - WiFi adapter (built-in or USB)
 
 ## Installation
@@ -200,5 +200,5 @@ When contributing to this package:
 
 For issues related to:
 - **TurtleBot3 setup**: Refer to official TurtleBot3 documentation
-- **ROS2 Humble**: Check ROS2 community forums
+- **ROS2 Jazzy**: Check ROS2 community forums
 - **WiFi configuration**: Consult Ubuntu networking guides

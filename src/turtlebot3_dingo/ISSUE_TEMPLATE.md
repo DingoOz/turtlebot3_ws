@@ -39,6 +39,7 @@ ISSUE TEMPLATE ver. 0.4.2
     - [ ] ROS2 Foxy Fitzroy
     - [ ] ROS2 Galactic Geochelone
     - [ ] ROS2 Humble Hawksbill
+    - [ ] ROS2 Jazzy Jalisco
     - [ ] ROS2 Rolling Ridley
 
 6. Please describe the issue.
